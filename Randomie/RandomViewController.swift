@@ -14,6 +14,7 @@ class RandomViewController: UIViewController {
     
 
     @IBOutlet weak var imageView: UIImageView!
+    var imageOrientation = CGImagePropertyOrientation(.up)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,60 @@ class RandomViewController: UIViewController {
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         showImagePickerOptions()
+    }
+    
+    //MARK: - Functions
+    func detectImage(with cgimage: CGImage) {
+        let request = VNDetectFaceRectanglesRequest(completionHandler: self.handleFaceDetectionRequest)
+        
+        let handler = VNImageRequestHandler(cgImage: cgimage, orientation: imageOrientation, options: [:])
+        
+        // Perform request
+        DispatchQueue.global().async {
+            do {
+                try handler.perform([request])
+            } catch {
+                fatalError("Error performing request")
+            }
+        }
+        
+    }
+    
+    private func handleFaceDetectionRequest(request: VNRequest?, error: Error?) {
+        if let requestError = error as NSError? {
+            print(requestError)
+            return
+        }
+        
+        DispatchQueue.main.async {
+            guard let image = self.imageView.image else { return }
+            guard let cgImage = image.cgImage else { return }
+            
+            let imageRect = self.determineScale(cgImage: cgImage, imageViewFrame: self.imageView.frame)
+            
+            self.imageView.layer.sublayers = nil
+            
+            
+            if let results = request?.results as? [VNFaceObservation] {
+                results.forEach { (observation) in
+                    let faceRect = self.convertUnitToPoint(originalImageRect: imageRect, targetRect: observation.boundingBox)
+                    
+                    let emojiRect = CGRect(x: faceRect.origin.x,
+                                           y: faceRect.origin.y,
+                                           width: faceRect.size.width,
+                                           height: faceRect.size.height * 1.5)
+                    
+                    let textLayer = CATextLayer()
+                    textLayer.string = "🎃"
+                    textLayer.fontSize = faceRect.width
+                    textLayer.frame = emojiRect
+                    textLayer.contentsScale = UIScreen.main.scale
+                    
+                    self.imageView.layer.addSublayer(textLayer)
+                }
+            }
+        }
+        
     }
     
     func showImagePickerOptions() {
@@ -33,7 +88,6 @@ class RandomViewController: UIViewController {
 
             self.prensentCameraPicker()
         }
-        
         
         // Library button
         let libraryAction = UIAlertAction(title: "Import from Library", style: .default) { [weak self] (action) in
@@ -48,6 +102,8 @@ class RandomViewController: UIViewController {
         alert.addAction(cameraAction)
         alert.addAction(libraryAction)
         alert.addAction(cancelAction)
+        
+        alert.view.layoutIfNeeded() //avoid Snapshotting error
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -76,15 +132,30 @@ class RandomViewController: UIViewController {
 extension RandomViewController: PHPickerViewControllerDelegate {
     
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        
+        // Dismiss the controller
         picker.dismiss(animated: true, completion: nil)
         
         for result in results {
             result.itemProvider.loadObject(ofClass: UIImage.self, completionHandler: { (object, error) in
-                if let image = object as? UIImage {
+                if let userPickedImage = object as? UIImage {
+                    
+                    // Do not put this in the async process
+                    // the handler needs to know the image orientation to detect objects
+                    self.imageOrientation = CGImagePropertyOrientation(userPickedImage.imageOrientation)
+                    
+                    // Use UIImage
                     DispatchQueue.main.async {
-                        // Use UIImage
-                        self.imageView.image = image
+                        self.imageView.image = userPickedImage
                     }
+                    
+                    guard let cgImage = userPickedImage.cgImage else {
+                        fatalError("Error converting CGImage from userPickedImage")
+                    }
+                    
+                    //TODO: detectImage
+                    self.detectImage(with: cgImage)
+                    
                 }
             })
         }
@@ -97,16 +168,26 @@ extension RandomViewController: UIImagePickerControllerDelegate, UINavigationCon
     // Get image from camera
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
+        // Dismiss the controller
+        picker.dismiss(animated: true, completion: nil)
+        
         if let userCapturedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             
-            imageView.image = userCapturedImage
+            // Do not put this in the async process
+            // the handler needs to know the image orientation to detect objects
+            self.imageOrientation = CGImagePropertyOrientation(userCapturedImage.imageOrientation)
             
-            guard let ciImage = CIImage(image: userCapturedImage) else { fatalError("Could not convert to CIImage") }
+            DispatchQueue.main.async {
+                self.imageView.image = userCapturedImage
+            }
+            
+            guard let cgImage = userCapturedImage.cgImage else {
+                fatalError("Error converting CGImage from userCapturedImage")
+            }
             
             //TODO: detectImage
-            print(ciImage)
+            self.detectImage(with: cgImage)
             
-            picker.dismiss(animated: true, completion: nil)
         }
     }
 }
