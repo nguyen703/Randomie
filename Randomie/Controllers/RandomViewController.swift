@@ -19,13 +19,34 @@ class RandomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Add imageView tap gesture recognizer
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(tapGestureRecognizer)
+        
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+
+        // TODO: add action when tapped
+        
+        // Return when no image found in imageView
+        if (imageView.image == nil) { return }
+        
+        // Return when no sublayers found
+        guard let sublayers = tappedImage.layer.sublayers else { return }
+        
+        
+        
+        print(sublayers.count)
     }
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         showImagePickerOptions()
     }
     
-    //MARK: - Functions
+    //MARK: - Faces Detection Functions
     func detectImage(with cgimage: CGImage) {
         let request = VNDetectFaceRectanglesRequest(completionHandler: self.handleFaceDetectionRequest)
         
@@ -69,6 +90,9 @@ class RandomViewController: UIViewController {
                     let textLayer = CATextLayer()
                     textLayer.string = "🎃"
                     textLayer.fontSize = faceRect.width
+                    textLayer.shadowColor = CGColor(srgbRed: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+                    textLayer.shadowRadius = 3
+                    textLayer.shadowOpacity = 0.3
                     textLayer.frame = emojiRect
                     textLayer.contentsScale = UIScreen.main.scale
                     
@@ -79,6 +103,7 @@ class RandomViewController: UIViewController {
         
     }
     
+    //MARK: - Show Bottom Sheet Options
     func showImagePickerOptions() {
         let alert = UIAlertController(title: "Pick a photo", message: "Choose a photo from Library or Camera", preferredStyle: .actionSheet)
         
@@ -153,7 +178,7 @@ extension RandomViewController: PHPickerViewControllerDelegate {
                         fatalError("Error converting CGImage from userPickedImage")
                     }
                     
-                    //TODO: detectImage
+                    // Detect Image
                     self.detectImage(with: cgImage)
                     
                 }
@@ -185,7 +210,7 @@ extension RandomViewController: UIImagePickerControllerDelegate, UINavigationCon
                 fatalError("Error converting CGImage from userCapturedImage")
             }
             
-            //TODO: detectImage
+            // Detect Image
             self.detectImage(with: cgImage)
             
         }
