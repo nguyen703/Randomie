@@ -1,0 +1,667 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F2910DE389F65416350EC54C5E8144C /* loady-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26535280462D976ED54A3073C00F8831 /* loady-dummy.m */; };
+		1064235C8676D47C68A3B7B27E5C97BF /* Loady+NVActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BAA29241963855066E548767756BBA /* Loady+NVActivityIndicatorView.swift */; };
+		17079CAB5A05022054B7A7182459A529 /* LoadyTopLineAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433666A5402A55B687B9AF738037609E /* LoadyTopLineAnimation.swift */; };
+		1FEC122A0E90A93BA3200F2B25692DAC /* LoadyAnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FECD1EE2CDCFF9EF924FCE7BB3346E7 /* LoadyAnimationType.swift */; };
+		20B4290744102BA4195F89D0F7BFBFBF /* LoadyDownloadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61559EED1979E9679CBF00A1C2428DC /* LoadyDownloadingAnimation.swift */; };
+		210926EF833F10B2500C234473636B3B /* LoadyBackgroundHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E71EAC69B5417501FBF5E7B42315046 /* LoadyBackgroundHighlighter.swift */; };
+		26109D07F321C0BC5E9F496296A88615 /* LoadyAndroidAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5470D8B7E3A49D10DBE60684ED1116E /* LoadyAndroidAnimation.swift */; };
+		33A149A1F7E54DFD2E70456F66ECCBB0 /* Pods-Randomie-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C276FBEE8B891A1545DDF2BA28D7663 /* Pods-Randomie-dummy.m */; };
+		4546957B19E003494E525322BD7F92AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		47570EB943EC75C768C41E61DB476D08 /* LoadyFourPhaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317E30E57FF99D60F4EFBB05E3680C8E /* LoadyFourPhaseButton.swift */; };
+		560D3AB7FEA2EC9BC20BCE18A978AD10 /* Pods-Randomie-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 989EAE43EED022311D55C8F38140BF40 /* Pods-Randomie-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C833645E8CA0E7D56BBD883708A0E3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		76A0CAB656D7A47CABE10C10A961306E /* Loadible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FF951C673E32A8D83AD0BB64E92342 /* Loadible.swift */; };
+		82517FDA45C922DB751921CECF335CFB /* Loady.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683F5590146B0BC36D855E8863E45BF /* Loady.swift */; };
+		A75B116EBE321CB03137AB705F15189F /* LoadyCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0ECD776B9878191D3BBDF9020C76AB /* LoadyCore.swift */; };
+		B0527FD976804C305AC2B89A7F3F80E1 /* LoadyCircleAndThickAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A8F4A759B20C3FDB62ED975376E38D /* LoadyCircleAndThickAnimation.swift */; };
+		BCB2BB0167B689BAEBDDD069C5B119D1 /* LoadyAnimationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7A2B72114B476278733638E8154B63 /* LoadyAnimationOptions.swift */; };
+		BDA400E60A47A2C4503A1BB49C981DC8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		C0035AD59D5F4384CE34237D193B9883 /* LoadyIndicatorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DAFFFFF6C6A4F171C81FC162388031 /* LoadyIndicatorAnimation.swift */; };
+		CCFE511CFE8271B93F50FD082CE1EE6B /* LoadyFourPhaseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0016BD29557301388BD60E4688C41A /* LoadyFourPhaseAnimation.swift */; };
+		D22EBE03DBCC5942C04D4B2B4DB0BCA5 /* loady-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C511A90C15CC4F78C6B48D2D968433 /* loady-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9CE5EF4EE7F39EF79C7A6398A0DD287 /* LoadyAppStoreAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F807E91CEBA9F97769A8C82EE3AB886F /* LoadyAppStoreAnimation.swift */; };
+		FC24BE018202396A81B349281060460E /* LoadyAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7128177139FA05BE21BF46A4EFD1EAC /* LoadyAnimation.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B49CF152D5D8F482489D6C244C5ECF89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E127F90C505B1CFC74316524D88CDAB8;
+			remoteInfo = loady;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1683F5590146B0BC36D855E8863E45BF /* Loady.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Loady.swift; path = Loady/Classes/LoadyButton/Loady.swift; sourceTree = "<group>"; };
+		206DA1227E1B1BD8D5AC58098E759043 /* Pods-Randomie-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Randomie-acknowledgements.markdown"; sourceTree = "<group>"; };
+		26535280462D976ED54A3073C00F8831 /* loady-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "loady-dummy.m"; sourceTree = "<group>"; };
+		272B581C8F6A829B7E523D68D06C12DF /* loady.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = loady.release.xcconfig; sourceTree = "<group>"; };
+		2D8ACA6F8291577A265E65D3DF4EF198 /* loady.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = loady.debug.xcconfig; sourceTree = "<group>"; };
+		317E30E57FF99D60F4EFBB05E3680C8E /* LoadyFourPhaseButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadyFourPhaseButton.swift; path = Loady/Classes/LoadyButton/LoadyFourPhaseButton.swift; sourceTree = "<group>"; };
+		433666A5402A55B687B9AF738037609E /* LoadyTopLineAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadyTopLineAnimation.swift; path = Loady/Classes/Animations/LoadyTopLineAnimation.swift; sourceTree = "<group>"; };
+		45653B5FE33D2FF4F6581A691EA72608 /* Pods-Randomie-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Randomie-Info.plist"; sourceTree = "<group>"; };
+		664521FC66BAC1668A89D67228C51362 /* Pods-Randomie-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Randomie-frameworks.sh"; sourceTree = "<group>"; };
+		6C276FBEE8B891A1545DDF2BA28D7663 /* Pods-Randomie-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Randomie-dummy.m"; sourceTree = "<group>"; };
+		79A8F4A759B20C3FDB62ED975376E38D /* LoadyCircleAndThickAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadyCircleAndThickAnimation.swift; path = Loady/Classes/Animations/LoadyCircleAndThickAnimation.swift; sourceTree = "<group>"; };
+		7A0016BD29557301388BD60E4688C41A /* LoadyFourPhaseAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadyFourPhaseAnimation.swift; path = Loady/Classes/Animations/LoadyFourPhaseAnimation.swift; sourceTree = "<group>"; };
+		7FECD1EE2CDCFF9EF924FCE7BB3346E7 /* LoadyAnimationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadyAnimationType.swift; path = Loady/Classes/LoadyAnimationType.swift; sourceTree = "<group>"; };
+		82BAA29241963855066E548767756BBA /* Loady+NVActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Loady+NVActivityIndicatorView.swift"; path = "Loady/Classes/Loady+NVActivityIndicatorView.swift"; sourceTree = "<group>"; };
+		85FF951C673E32A8D83AD0BB64E92342 /* Loadible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Loadible.swift; path = Loady/Classes/Loadible.swift; sourceTree = "<group>"; };
+		8B0ECD776B9878191D3BBDF9020C76AB /* LoadyCore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadyCore.swift; path = Loady/Classes/LoadyCore.swift; sourceTree = "<group>"; };
+		8E71EAC69B5417501FBF5E7B42315046 /* LoadyBackgroundHighlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadyBackgroundHighlighter.swift; path = Loady/Classes/Animations/LoadyBackgroundHighlighter.swift; sourceTree = "<group>"; };
+		92085989F3827DB2EB19A9268C0B2916 /* Pods-Randomie-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Randomie-acknowledgements.plist"; sourceTree = "<group>"; };
+		989EAE43EED022311D55C8F38140BF40 /* Pods-Randomie-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Randomie-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A5B78CB485C30ABB5407BB158D3D4B63 /* Pods_Randomie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Randomie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A61559EED1979E9679CBF00A1C2428DC /* LoadyDownloadingAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadyDownloadingAnimation.swift; path = Loady/Classes/Animations/LoadyDownloadingAnimation.swift; sourceTree = "<group>"; };
+		A7128177139FA05BE21BF46A4EFD1EAC /* LoadyAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadyAnimation.swift; path = Loady/Classes/LoadyAnimation.swift; sourceTree = "<group>"; };
+		B1CA8377D18F8C7DF03D41F24AD68621 /* Pods-Randomie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Randomie.release.xcconfig"; sourceTree = "<group>"; };
+		B3DAFFFFF6C6A4F171C81FC162388031 /* LoadyIndicatorAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadyIndicatorAnimation.swift; path = Loady/Classes/Animations/LoadyIndicatorAnimation.swift; sourceTree = "<group>"; };
+		C2C511A90C15CC4F78C6B48D2D968433 /* loady-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "loady-umbrella.h"; sourceTree = "<group>"; };
+		C5470D8B7E3A49D10DBE60684ED1116E /* LoadyAndroidAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadyAndroidAnimation.swift; path = Loady/Classes/Animations/LoadyAndroidAnimation.swift; sourceTree = "<group>"; };
+		CB7A2B72114B476278733638E8154B63 /* LoadyAnimationOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadyAnimationOptions.swift; path = Loady/Classes/LoadyAnimationOptions.swift; sourceTree = "<group>"; };
+		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D39745A072699E2B4C3CA4C92A67B27A /* loady.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = loady.modulemap; sourceTree = "<group>"; };
+		E616632701221C683424770641EA9E1B /* loady-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "loady-Info.plist"; sourceTree = "<group>"; };
+		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F6E2EACB7ED59F7E9C1020578FC5E855 /* loady-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "loady-prefix.pch"; sourceTree = "<group>"; };
+		F7CAA5AE5B4BFA952DA562A93471E092 /* Pods-Randomie.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Randomie.modulemap"; sourceTree = "<group>"; };
+		F807E91CEBA9F97769A8C82EE3AB886F /* LoadyAppStoreAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadyAppStoreAnimation.swift; path = Loady/Classes/Animations/LoadyAppStoreAnimation.swift; sourceTree = "<group>"; };
+		F868A837634D359991930D4B730343E9 /* Pods-Randomie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Randomie.debug.xcconfig"; sourceTree = "<group>"; };
+		FA2BDA50048D109ECC3CCA7BB5760EB4 /* Loady.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Loady.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05DE4765B1AA471FF343BC27E089599C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4546957B19E003494E525322BD7F92AF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD0D5BBE9542641989E3BD235DF59A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C833645E8CA0E7D56BBD883708A0E3E /* Foundation.framework in Frameworks */,
+				BDA400E60A47A2C4503A1BB49C981DC8 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D181846A58D4BB468286E0D9EB1B8E0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				983CD83F75A6252B61E3F3C9F5780DC5 /* Pods-Randomie */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4E753F4ACF8411F82962CD3ED9E15B91 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D39745A072699E2B4C3CA4C92A67B27A /* loady.modulemap */,
+				26535280462D976ED54A3073C00F8831 /* loady-dummy.m */,
+				E616632701221C683424770641EA9E1B /* loady-Info.plist */,
+				F6E2EACB7ED59F7E9C1020578FC5E855 /* loady-prefix.pch */,
+				C2C511A90C15CC4F78C6B48D2D968433 /* loady-umbrella.h */,
+				2D8ACA6F8291577A265E65D3DF4EF198 /* loady.debug.xcconfig */,
+				272B581C8F6A829B7E523D68D06C12DF /* loady.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/loady";
+			sourceTree = "<group>";
+		};
+		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */,
+				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		983CD83F75A6252B61E3F3C9F5780DC5 /* Pods-Randomie */ = {
+			isa = PBXGroup;
+			children = (
+				F7CAA5AE5B4BFA952DA562A93471E092 /* Pods-Randomie.modulemap */,
+				206DA1227E1B1BD8D5AC58098E759043 /* Pods-Randomie-acknowledgements.markdown */,
+				92085989F3827DB2EB19A9268C0B2916 /* Pods-Randomie-acknowledgements.plist */,
+				6C276FBEE8B891A1545DDF2BA28D7663 /* Pods-Randomie-dummy.m */,
+				664521FC66BAC1668A89D67228C51362 /* Pods-Randomie-frameworks.sh */,
+				45653B5FE33D2FF4F6581A691EA72608 /* Pods-Randomie-Info.plist */,
+				989EAE43EED022311D55C8F38140BF40 /* Pods-Randomie-umbrella.h */,
+				F868A837634D359991930D4B730343E9 /* Pods-Randomie.debug.xcconfig */,
+				B1CA8377D18F8C7DF03D41F24AD68621 /* Pods-Randomie.release.xcconfig */,
+			);
+			name = "Pods-Randomie";
+			path = "Target Support Files/Pods-Randomie";
+			sourceTree = "<group>";
+		};
+		CA4EE09B2D900FDDABB7A88DD8524E22 /* loady */ = {
+			isa = PBXGroup;
+			children = (
+				85FF951C673E32A8D83AD0BB64E92342 /* Loadible.swift */,
+				1683F5590146B0BC36D855E8863E45BF /* Loady.swift */,
+				82BAA29241963855066E548767756BBA /* Loady+NVActivityIndicatorView.swift */,
+				C5470D8B7E3A49D10DBE60684ED1116E /* LoadyAndroidAnimation.swift */,
+				A7128177139FA05BE21BF46A4EFD1EAC /* LoadyAnimation.swift */,
+				CB7A2B72114B476278733638E8154B63 /* LoadyAnimationOptions.swift */,
+				7FECD1EE2CDCFF9EF924FCE7BB3346E7 /* LoadyAnimationType.swift */,
+				F807E91CEBA9F97769A8C82EE3AB886F /* LoadyAppStoreAnimation.swift */,
+				8E71EAC69B5417501FBF5E7B42315046 /* LoadyBackgroundHighlighter.swift */,
+				79A8F4A759B20C3FDB62ED975376E38D /* LoadyCircleAndThickAnimation.swift */,
+				8B0ECD776B9878191D3BBDF9020C76AB /* LoadyCore.swift */,
+				A61559EED1979E9679CBF00A1C2428DC /* LoadyDownloadingAnimation.swift */,
+				7A0016BD29557301388BD60E4688C41A /* LoadyFourPhaseAnimation.swift */,
+				317E30E57FF99D60F4EFBB05E3680C8E /* LoadyFourPhaseButton.swift */,
+				B3DAFFFFF6C6A4F171C81FC162388031 /* LoadyIndicatorAnimation.swift */,
+				433666A5402A55B687B9AF738037609E /* LoadyTopLineAnimation.swift */,
+				4E753F4ACF8411F82962CD3ED9E15B91 /* Support Files */,
+			);
+			path = loady;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				D7D962709ADA2BE3C1DC380B8768F1F8 /* Pods */,
+				E54CEFA047A3492B0BFFCAD47C28C554 /* Products */,
+				3D181846A58D4BB468286E0D9EB1B8E0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D7D962709ADA2BE3C1DC380B8768F1F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA4EE09B2D900FDDABB7A88DD8524E22 /* loady */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E54CEFA047A3492B0BFFCAD47C28C554 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA2BDA50048D109ECC3CCA7BB5760EB4 /* Loady.framework */,
+				A5B78CB485C30ABB5407BB158D3D4B63 /* Pods_Randomie.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		70DF5963DC2464F896746DE7C5386707 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				560D3AB7FEA2EC9BC20BCE18A978AD10 /* Pods-Randomie-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8542298FAB5F03AAD8FE42542F65BBE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D22EBE03DBCC5942C04D4B2B4DB0BCA5 /* loady-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7DDE45590513064E96C85095A9AE4185 /* Pods-Randomie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6522F5CEF1B834C109D65A04B33C1A34 /* Build configuration list for PBXNativeTarget "Pods-Randomie" */;
+			buildPhases = (
+				70DF5963DC2464F896746DE7C5386707 /* Headers */,
+				C499A5E8FFA0DA879917C2BB22F23A0D /* Sources */,
+				05DE4765B1AA471FF343BC27E089599C /* Frameworks */,
+				B94E03163873CA259E64E3B586A38D5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7AC167E848EAFE2BEE5354E6DC6BC652 /* PBXTargetDependency */,
+			);
+			name = "Pods-Randomie";
+			productName = Pods_Randomie;
+			productReference = A5B78CB485C30ABB5407BB158D3D4B63 /* Pods_Randomie.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E127F90C505B1CFC74316524D88CDAB8 /* loady */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 731213F3F8EE2012D42CCAD1C704D92A /* Build configuration list for PBXNativeTarget "loady" */;
+			buildPhases = (
+				B8542298FAB5F03AAD8FE42542F65BBE /* Headers */,
+				DB50443881CB59DF7D975496963CCF47 /* Sources */,
+				4CD0D5BBE9542641989E3BD235DF59A0 /* Frameworks */,
+				59571E01BE65ECE9182099E9CBB33577 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = loady;
+			productName = Loady;
+			productReference = FA2BDA50048D109ECC3CCA7BB5760EB4 /* Loady.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1340;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = E54CEFA047A3492B0BFFCAD47C28C554 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E127F90C505B1CFC74316524D88CDAB8 /* loady */,
+				7DDE45590513064E96C85095A9AE4185 /* Pods-Randomie */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59571E01BE65ECE9182099E9CBB33577 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B94E03163873CA259E64E3B586A38D5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C499A5E8FFA0DA879917C2BB22F23A0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33A149A1F7E54DFD2E70456F66ECCBB0 /* Pods-Randomie-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB50443881CB59DF7D975496963CCF47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76A0CAB656D7A47CABE10C10A961306E /* Loadible.swift in Sources */,
+				82517FDA45C922DB751921CECF335CFB /* Loady.swift in Sources */,
+				1064235C8676D47C68A3B7B27E5C97BF /* Loady+NVActivityIndicatorView.swift in Sources */,
+				0F2910DE389F65416350EC54C5E8144C /* loady-dummy.m in Sources */,
+				26109D07F321C0BC5E9F496296A88615 /* LoadyAndroidAnimation.swift in Sources */,
+				FC24BE018202396A81B349281060460E /* LoadyAnimation.swift in Sources */,
+				BCB2BB0167B689BAEBDDD069C5B119D1 /* LoadyAnimationOptions.swift in Sources */,
+				1FEC122A0E90A93BA3200F2B25692DAC /* LoadyAnimationType.swift in Sources */,
+				D9CE5EF4EE7F39EF79C7A6398A0DD287 /* LoadyAppStoreAnimation.swift in Sources */,
+				210926EF833F10B2500C234473636B3B /* LoadyBackgroundHighlighter.swift in Sources */,
+				B0527FD976804C305AC2B89A7F3F80E1 /* LoadyCircleAndThickAnimation.swift in Sources */,
+				A75B116EBE321CB03137AB705F15189F /* LoadyCore.swift in Sources */,
+				20B4290744102BA4195F89D0F7BFBFBF /* LoadyDownloadingAnimation.swift in Sources */,
+				CCFE511CFE8271B93F50FD082CE1EE6B /* LoadyFourPhaseAnimation.swift in Sources */,
+				47570EB943EC75C768C41E61DB476D08 /* LoadyFourPhaseButton.swift in Sources */,
+				C0035AD59D5F4384CE34237D193B9883 /* LoadyIndicatorAnimation.swift in Sources */,
+				17079CAB5A05022054B7A7182459A529 /* LoadyTopLineAnimation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7AC167E848EAFE2BEE5354E6DC6BC652 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = loady;
+			target = E127F90C505B1CFC74316524D88CDAB8 /* loady */;
+			targetProxy = B49CF152D5D8F482489D6C244C5ECF89 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		381E3009D37156B16EF6B2BD20A478BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D8ACA6F8291577A265E65D3DF4EF198 /* loady.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/loady/loady-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/loady/loady-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/loady/loady.modulemap";
+				PRODUCT_MODULE_NAME = Loady;
+				PRODUCT_NAME = Loady;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B8F3C96A5CD2A1350471734E9BD4BD3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 272B581C8F6A829B7E523D68D06C12DF /* loady.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/loady/loady-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/loady/loady-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/loady/loady.modulemap";
+				PRODUCT_MODULE_NAME = Loady;
+				PRODUCT_NAME = Loady;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		FA176C3208A597A88FCB18CEB2F2927F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F868A837634D359991930D4B730343E9 /* Pods-Randomie.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Randomie/Pods-Randomie-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Randomie/Pods-Randomie.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FE46CB3B5D5995BAF3706F2307A44F2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1CA8377D18F8C7DF03D41F24AD68621 /* Pods-Randomie.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Randomie/Pods-Randomie-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Randomie/Pods-Randomie.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6522F5CEF1B834C109D65A04B33C1A34 /* Build configuration list for PBXNativeTarget "Pods-Randomie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA176C3208A597A88FCB18CEB2F2927F /* Debug */,
+				FE46CB3B5D5995BAF3706F2307A44F2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		731213F3F8EE2012D42CCAD1C704D92A /* Build configuration list for PBXNativeTarget "loady" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				381E3009D37156B16EF6B2BD20A478BF /* Debug */,
+				B8F3C96A5CD2A1350471734E9BD4BD3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

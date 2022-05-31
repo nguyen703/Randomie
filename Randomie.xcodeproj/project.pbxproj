@@ -14,9 +14,14 @@
 		B65CE207283B466300ADE820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65CE206283B466300ADE820 /* Assets.xcassets */; };
 		B65CE20A283B466300ADE820 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65CE208283B466300ADE820 /* LaunchScreen.storyboard */; };
 		B65CE212283CC9BC00ADE820 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE211283CC9BC00ADE820 /* Helper.swift */; };
+		B65CE216283E3A0300ADE820 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE215283E3A0300ADE820 /* Constants.swift */; };
+		B65CE23C284637B200ADE820 /* RandomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE23B284637B200ADE820 /* RandomButton.swift */; };
+		BADEA36795ED0F6740724270 /* Pods_Randomie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1794743AE73C5F429CCD245 /* Pods_Randomie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B5A260419956148EA86A94E /* Pods-Randomie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Randomie.release.xcconfig"; path = "Target Support Files/Pods-Randomie/Pods-Randomie.release.xcconfig"; sourceTree = "<group>"; };
+		461EBA86F532FF11E3155C29 /* Pods-Randomie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Randomie.debug.xcconfig"; path = "Target Support Files/Pods-Randomie/Pods-Randomie.debug.xcconfig"; sourceTree = "<group>"; };
 		B65CE1FA283B466100ADE820 /* Randomie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Randomie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65CE1FD283B466100ADE820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B65CE1FF283B466100ADE820 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +31,9 @@
 		B65CE209283B466300ADE820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B65CE20B283B466300ADE820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B65CE211283CC9BC00ADE820 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		B65CE215283E3A0300ADE820 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B65CE23B284637B200ADE820 /* RandomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomButton.swift; sourceTree = "<group>"; };
+		D1794743AE73C5F429CCD245 /* Pods_Randomie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Randomie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BADEA36795ED0F6740724270 /* Pods_Randomie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27A9CD17A3C24785035D4A68 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				461EBA86F532FF11E3155C29 /* Pods-Randomie.debug.xcconfig */,
+				0B5A260419956148EA86A94E /* Pods-Randomie.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4BDB655D35127A29204C6CC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1794743AE73C5F429CCD245 /* Pods_Randomie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B65CE1F1283B466100ADE820 = {
 			isa = PBXGroup;
 			children = (
 				B65CE1FC283B466100ADE820 /* Randomie */,
 				B65CE1FB283B466100ADE820 /* Products */,
+				27A9CD17A3C24785035D4A68 /* Pods */,
+				4BDB655D35127A29204C6CC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,14 +88,40 @@
 			children = (
 				B65CE1FD283B466100ADE820 /* AppDelegate.swift */,
 				B65CE1FF283B466100ADE820 /* SceneDelegate.swift */,
-				B65CE201283B466100ADE820 /* RandomViewController.swift */,
-				B65CE211283CC9BC00ADE820 /* Helper.swift */,
-				B65CE203283B466100ADE820 /* Main.storyboard */,
+				B65CE213283E39C800ADE820 /* Controllers */,
+				B65CE214283E39D800ADE820 /* HelperFiles */,
+				B65CE23A284635F500ADE820 /* Views */,
 				B65CE206283B466300ADE820 /* Assets.xcassets */,
 				B65CE208283B466300ADE820 /* LaunchScreen.storyboard */,
 				B65CE20B283B466300ADE820 /* Info.plist */,
 			);
 			path = Randomie;
+			sourceTree = "<group>";
+		};
+		B65CE213283E39C800ADE820 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B65CE201283B466100ADE820 /* RandomViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B65CE214283E39D800ADE820 /* HelperFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B65CE211283CC9BC00ADE820 /* Helper.swift */,
+				B65CE215283E3A0300ADE820 /* Constants.swift */,
+			);
+			path = HelperFiles;
+			sourceTree = "<group>";
+		};
+		B65CE23A284635F500ADE820 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B65CE203283B466100ADE820 /* Main.storyboard */,
+				B65CE23B284637B200ADE820 /* RandomButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B65CE20E283B466300ADE820 /* Build configuration list for PBXNativeTarget "Randomie" */;
 			buildPhases = (
+				69DAC74F6B4853303988CC59 /* [CP] Check Pods Manifest.lock */,
 				B65CE1F6283B466100ADE820 /* Sources */,
 				B65CE1F7283B466100ADE820 /* Frameworks */,
 				B65CE1F8283B466100ADE820 /* Resources */,
+				9BA364AB138F69227D64ED87 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,11 +192,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		69DAC74F6B4853303988CC59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Randomie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BA364AB138F69227D64ED87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Randomie/Pods-Randomie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Randomie/Pods-Randomie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Randomie/Pods-Randomie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B65CE1F6283B466100ADE820 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B65CE23C284637B200ADE820 /* RandomButton.swift in Sources */,
+				B65CE216283E3A0300ADE820 /* Constants.swift in Sources */,
 				B65CE202283B466100ADE820 /* RandomViewController.swift in Sources */,
 				B65CE1FE283B466100ADE820 /* AppDelegate.swift in Sources */,
 				B65CE200283B466100ADE820 /* SceneDelegate.swift in Sources */,
@@ -286,6 +386,7 @@
 		};
 		B65CE20F283B466300ADE820 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 461EBA86F532FF11E3155C29 /* Pods-Randomie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,6 +416,7 @@
 		};
 		B65CE210283B466300ADE820 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B5A260419956148EA86A94E /* Pods-Randomie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

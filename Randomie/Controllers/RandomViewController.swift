@@ -8,42 +8,156 @@
 import UIKit
 import Vision
 import PhotosUI
+import Loady
 
 class RandomViewController: UIViewController {
     
-    
+    var tempTimer1 : Timer?
 
     @IBOutlet weak var imageView: UIImageView!
+    
     var imageOrientation = CGImagePropertyOrientation(.up)
+    var winnerFound = false
+    var isButtonRandomCreated = false
+    var usedImages = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Add imageView tap gesture recognizer
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        imageView.isUserInteractionEnabled = true
-        imageView.addGestureRecognizer(tapGestureRecognizer)
-        
-    }
     
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-        let tappedImage = tapGestureRecognizer.view as! UIImageView
 
-        // TODO: add action when tapped
-        
-        // Return when no image found in imageView
-        if (imageView.image == nil) { return }
-        
-        // Return when no sublayers found
-        guard let sublayers = tappedImage.layer.sublayers else { return }
-        
-        
-        
-        print(sublayers.count)
     }
     
+    //MARK: - addButtonPressed Function
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         showImagePickerOptions()
+    }
+    
+    //MARK: - Randomize Button Functions
+    func createRandomizeButton() {
+        
+        // Do not create if existed
+        if (isButtonRandomCreated) { return }
+        
+        DispatchQueue.main.async {
+            let buttonRandomize = LoadyButton()
+            
+            buttonRandomize.frame.size.width = K.Button.RandomButton.width
+            buttonRandomize.frame.size.height = K.Button.RandomButton.height
+            buttonRandomize.frame = CGRect(
+                x: self.view.frame.size.width/2 - buttonRandomize.frame.size.width/2,
+                y: self.view.frame.size.height / 10 * 7,
+                width: buttonRandomize.frame.width,
+                height: buttonRandomize.frame.height)
+            
+            // Loading Top-line effect
+            buttonRandomize.setAnimation(LoadyAnimationType.topLine())
+            buttonRandomize.loadingColor = UIColor.white
+            
+            // Apply customized setting for the button
+            buttonRandomize.customizeButton()
+            buttonRandomize.addTarget(self, action: #selector(self.buttonRandomizePressed(_:)), for: .touchUpInside)
+            
+            // Do not create button if it exists already
+            self.isButtonRandomCreated = true
+            self.view.addSubview(buttonRandomize)
+        }
+    }
+    
+    
+    // Add action to button
+    @objc func buttonRandomizePressed(_ sender: UIButton) {
+        guard let button = sender as? LoadyButton else { return }
+        
+        // Check if winner is found
+        // Check before random
+        if !isValidImage(img: imageView) { return }
+        if (winnerFound) { return }
+        
+        button.addTouchedEffect()
+        
+        button.startLoading()
+        var percent: CGFloat = 0
+        
+        self.tempTimer1?.invalidate()
+        self.tempTimer1 = nil
+        if #available(iOS 10.0, *) {
+            self.tempTimer1 = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true){(t) in
+                percent += CGFloat.random(in: 5...10)
+                
+                button.update(percent: percent)
+                if percent > 105 {
+                    percent = 100
+                    self.tempTimer1?.invalidate()
+                }
+            }
+        }
+        self.tempTimer1?.fire()
+        
+        /*
+        ////////////////////
+        // TRIGGER RANDOMIZE
+        ////////////////////
+        */
+        
+        
+        // Return when no sublayers found
+        guard let sublayers = imageView.layer.sublayers else { return }
+        
+        sublayers.forEach { layer in
+            self.animateRandomLayer(layer: layer,
+                                    duration: K.Animation.animDuration,
+                                    repeatDuration: K.Animation.animRepeatDuration)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + K.Animation.animFindWinnerAfter) {
+            button.stopLoading() // Stop button loading animation when show result
+            self.findWinner(sublayers)
+        }
+    }
+    
+    // Animation for all layers
+    func animateRandomLayer(layer: CALayer, after: CFTimeInterval = 0.0, duration: CFTimeInterval, repeatDuration: CFTimeInterval) {
+        let animation = CABasicAnimation(keyPath: "opacity")
+        
+        animation.fromValue = 1.0
+        animation.toValue = 0.0
+        animation.duration = duration
+        animation.beginTime = CACurrentMediaTime() + after
+        animation.fillMode = .removed
+        animation.repeatDuration = repeatDuration
+        
+        layer.add(animation, forKey: nil)
+    }
+    
+    func findWinner(_ layers: [CALayer]) {
+        let randomIndex = Int.random(in: 0..<layers.count)
+        layers.forEach { layer in
+            if layer != layers[randomIndex] {
+                layer.opacity = 0.0
+            } else {
+                animateRandomLayer(layer: layer,
+                                   duration: K.Animation.animFindWinnerDuration,
+                                   repeatDuration: K.Animation.animFindWinnerRepeatDuration)
+            }
+        }
+        
+        // Once the function is called, set winnerFound to true
+        winnerFound = true
+    }
+    
+    // Check if ImageView is not null
+    func isValidImage(img: UIImageView) -> Bool {
+        
+        if (imageView.image == nil) { return false }
+        
+        if usedImages.contains(img.image!.description) {
+            return false
+        } else {
+            usedImages.append(img.image!.description)
+            winnerFound = false
+            return true
+        }
+        
     }
     
     //MARK: - Faces Detection Functions
@@ -73,26 +187,27 @@ class RandomViewController: UIViewController {
             guard let image = self.imageView.image else { return }
             guard let cgImage = image.cgImage else { return }
             
+            // Determine scale of the image in ImageView
             let imageRect = self.determineScale(cgImage: cgImage, imageViewFrame: self.imageView.frame)
             
             self.imageView.layer.sublayers = nil
             
-            
+            // Each result is equal to a face in the image
             if let results = request?.results as? [VNFaceObservation] {
                 results.forEach { (observation) in
                     let faceRect = self.convertUnitToPoint(originalImageRect: imageRect, targetRect: observation.boundingBox)
                     
                     let emojiRect = CGRect(x: faceRect.origin.x,
-                                           y: faceRect.origin.y,
-                                           width: faceRect.size.width,
-                                           height: faceRect.size.height * 1.5)
+                                           y: faceRect.origin.y + faceRect.size.height, // emoji starts from the chin
+                                           width: faceRect.size.width * 2,
+                                           height: faceRect.size.height * 2)
                     
                     let textLayer = CATextLayer()
-                    textLayer.string = "🎃"
+                    textLayer.string = K.Layer.layerEmoji // Mofify the emoji in the Constants file
                     textLayer.fontSize = faceRect.width
-                    textLayer.shadowColor = CGColor(srgbRed: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
-                    textLayer.shadowRadius = 3
-                    textLayer.shadowOpacity = 0.3
+                    textLayer.shadowColor = K.Layer.layerShadowColor
+                    textLayer.shadowRadius = K.Layer.layerShadowRadius
+                    textLayer.shadowOpacity = K.Layer.layerShadowOpacity
                     textLayer.frame = emojiRect
                     textLayer.contentsScale = UIScreen.main.scale
                     
@@ -163,6 +278,7 @@ extension RandomViewController: PHPickerViewControllerDelegate {
         
         for result in results {
             result.itemProvider.loadObject(ofClass: UIImage.self, completionHandler: { (object, error) in
+                
                 if let userPickedImage = object as? UIImage {
                     
                     // Do not put this in the async process
@@ -180,8 +296,16 @@ extension RandomViewController: PHPickerViewControllerDelegate {
                     
                     // Detect Image
                     self.detectImage(with: cgImage)
+                    self.createRandomizeButton()
+                    
+                } else { // Error occured when getting image
+                    
+                    if self.imageView.image != nil {
+                        self.createRandomizeButton()
+                    }
                     
                 }
+                
             })
         }
     }
@@ -212,7 +336,15 @@ extension RandomViewController: UIImagePickerControllerDelegate, UINavigationCon
             
             // Detect Image
             self.detectImage(with: cgImage)
+            self.createRandomizeButton()
+            
+        } else { // Error occured when getting image
+            
+            if self.imageView.image != nil {
+                self.createRandomizeButton()
+            }
             
         }
+        
     }
 }

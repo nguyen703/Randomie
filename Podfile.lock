@@ -1,0 +1,16 @@
+PODS:
+  - loady (1.0.7)
+
+DEPENDENCIES:
+  - loady
+
+SPEC REPOS:
+  trunk:
+    - loady
+
+SPEC CHECKSUMS:
+  loady: f2acbcbd53bdeb55425e478304da2f7ff3ec706e
+
+PODFILE CHECKSUM: 3221bc0ccc667c78b354964c59d4fdcf73876fa6
+
+COCOAPODS: 1.11.3
