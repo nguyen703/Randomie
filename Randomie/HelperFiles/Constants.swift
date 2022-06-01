@@ -37,10 +37,19 @@ struct K {
         
         struct RandomButton {
             static let opacity: Float = 0.8
-            static let cornerRadius: CGFloat = 4.0
+            static let cornerRadius: CGFloat = 6.0
             static let width: CGFloat = 200
             static let height: CGFloat = 50
         }
         
+    }
+    
+    struct Icon {
+        static let mainScreen: String = "person-at"
+        static let settingsScreen: String = "circle-cross-left"
+    }
+    
+    struct TabBar {
+        static let height: CGFloat = 67.0
     }
 }

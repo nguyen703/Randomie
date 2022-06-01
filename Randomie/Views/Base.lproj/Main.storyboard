@@ -12,18 +12,18 @@
         <!--AboutViewController-->
         <scene sceneID="1iZ-1E-2nN">
             <objects>
-                <viewController title="AboutViewController" id="dR7-nd-pMz" sceneMemberID="viewController">
+                <viewController title="AboutViewController" id="dR7-nd-pMz" customClass="SettingsViewController" customModule="Randomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hhp-sG-BLv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="pYg-D9-mXB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="cirlcle-cross-left" id="Tzw-8l-BPQ"/>
+                    <navigationItem key="navigationItem" title="Settings" id="AoG-PJ-smM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbY-AL-9wi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="554"/>
+            <point key="canvasLocation" x="2813" y="567"/>
         </scene>
         <!--RandomViewController-->
         <scene sceneID="dZs-1N-gaW">
@@ -64,7 +64,7 @@
         <!--Randomie-->
         <scene sceneID="UPt-Jv-MR1">
             <objects>
-                <tabBarController id="Ma7-UR-XTI" sceneMemberID="viewController">
+                <tabBarController id="Ma7-UR-XTI" customClass="TabBarBarController" customModule="Randomie" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Randomie" id="CHP-c9-IZ4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jDi-mn-t8q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -73,12 +73,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="RiB-hA-uu0" kind="relationship" relationship="viewControllers" id="xsW-pt-5hn"/>
-                        <segue destination="dR7-nd-pMz" kind="relationship" relationship="viewControllers" id="y2n-ba-p4i"/>
+                        <segue destination="S8p-a1-E8S" kind="relationship" relationship="viewControllers" id="y2n-ba-p4i"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iAZ-PF-voX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926" y="117"/>
+            <point key="canvasLocation" x="904" y="188"/>
         </scene>
         <!--Random-->
         <scene sceneID="EO0-sa-2T6">
@@ -99,10 +99,29 @@
             </objects>
             <point key="canvasLocation" x="1902.8985507246377" y="-153.34821428571428"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="reH-B8-oto">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S8p-a1-E8S" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="circle-cross-left" id="Tzw-8l-BPQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qIK-h9-l9D">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dR7-nd-pMz" kind="relationship" relationship="rootViewController" id="Is1-3J-EGO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iei-1c-hTl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1903" y="567"/>
+        </scene>
     </scenes>
     <resources>
         <image name="camera" width="13" height="12"/>
-        <image name="cirlcle-cross-left" width="12" height="12"/>
+        <image name="circle-cross-left" width="12" height="12"/>
         <image name="person-at" width="12" height="10"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -120,7 +120,7 @@ class RandomViewController: UIViewController {
         let animation = CABasicAnimation(keyPath: "opacity")
         
         animation.fromValue = 1.0
-        animation.toValue = 0.0
+        animation.toValue = 0.1
         animation.duration = duration
         animation.beginTime = CACurrentMediaTime() + after
         animation.fillMode = .removed
