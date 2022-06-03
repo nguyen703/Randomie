@@ -12,7 +12,8 @@ import Loady
 
 class RandomViewController: UIViewController {
     
-    var tempTimer1 : Timer?
+    // Temp Timer for the randomize button effect
+    var tempTimerBtnEffect : Timer?
 
     @IBOutlet weak var imageView: UIImageView!
     
@@ -24,7 +25,6 @@ class RandomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-
     }
     
     //MARK: - addButtonPressed Function
@@ -78,20 +78,20 @@ class RandomViewController: UIViewController {
         button.startLoading()
         var percent: CGFloat = 0
         
-        self.tempTimer1?.invalidate()
-        self.tempTimer1 = nil
-        if #available(iOS 10.0, *) {
-            self.tempTimer1 = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true){(t) in
-                percent += CGFloat.random(in: 5...10)
-                
-                button.update(percent: percent)
-                if percent > 105 {
-                    percent = 100
-                    self.tempTimer1?.invalidate()
-                }
+        self.tempTimerBtnEffect?.invalidate()
+        self.tempTimerBtnEffect = nil
+        
+        self.tempTimerBtnEffect = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true){(t) in
+            percent += CGFloat.random(in: 5...10)
+            
+            button.update(percent: percent)
+            if percent > 105 {
+                percent = 100
+                self.tempTimerBtnEffect?.invalidate()
             }
         }
-        self.tempTimer1?.fire()
+        
+        self.tempTimerBtnEffect?.fire()
         
         /*
         ////////////////////

@@ -7,5 +7,8 @@ target 'Randomie' do
 
   # Pods for Randomie
   pod 'loady'
+  pod 'RxSwift', '6.5.0'
+  pod 'RxCocoa', '6.5.0'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/wowansm/Chameleon.git', :branch => 'swift5'
 
 end
