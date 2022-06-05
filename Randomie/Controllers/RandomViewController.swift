@@ -32,7 +32,11 @@ class RandomViewController: UIViewController {
         
         guard let navBar = navigationController?.navigationBar else { return }
         
+        
+        // Create gradient color based on Chameleon
         let gradientColor = GradientColor(.topToBottom, frame: UIScreen.main.bounds, colors: Array(arrayLiteral: K.Palette.firstColor, K.Palette.secondColor, K.Palette.thirdColor))
+        
+        // Chameleon helps create contrast color for text
         let contrastTextColor = ContrastColorOf(gradientColor, returnFlat: true)
         
         navBar.tintColor = contrastTextColor
