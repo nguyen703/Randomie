@@ -6,6 +6,8 @@
 //
 
 import CoreGraphics
+import UIKit
+import ChameleonFramework
 
 struct K {
     struct Layer {
@@ -31,6 +33,9 @@ struct K {
     
     struct Palette {
         static let topLineColor: CGColor = CGColor(srgbRed: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+        static let firstColor = UIColor(hexString: "caefd7")!
+        static let secondColor = UIColor(hexString: "f5bfd7")!
+        static let thirdColor = UIColor(hexString: "abc9e9")!
     }
     
     struct Button {

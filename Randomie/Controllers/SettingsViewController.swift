@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 class SettingsViewController: UIViewController {
 
@@ -13,6 +14,18 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
 
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        guard let navBar = navigationController?.navigationBar else { return }
+        
+        let gradientColor = GradientColor(.topToBottom, frame: UIScreen.main.bounds, colors: Array(arrayLiteral: K.Palette.firstColor, K.Palette.secondColor, K.Palette.thirdColor))
+        let contrastTextColor = ContrastColorOf(gradientColor, returnFlat: true)
+        
+        navBar.tintColor = contrastTextColor
+        
+        navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: contrastTextColor]
+        view.backgroundColor = gradientColor
     }
 
 }
