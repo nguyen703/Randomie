@@ -9,21 +9,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--AboutViewController-->
+        <!--SettingsViewController-->
         <scene sceneID="1iZ-1E-2nN">
             <objects>
-                <viewController title="AboutViewController" id="dR7-nd-pMz" customClass="SettingsViewController" customModule="Randomie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SettingsViewController" id="dR7-nd-pMz" customClass="SettingsViewController" customModule="Randomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hhp-sG-BLv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cpi-z4-aC5">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" tag="1" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="GIT-Wg-neS">
+                                        <rect key="frame" x="20" y="32" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GIT-Wg-neS" id="c42-Cz-hZt">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pYg-D9-mXB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cpi-z4-aC5" firstAttribute="bottom" secondItem="pYg-D9-mXB" secondAttribute="bottom" id="6dE-dS-QXI"/>
+                            <constraint firstItem="cpi-z4-aC5" firstAttribute="trailing" secondItem="pYg-D9-mXB" secondAttribute="trailing" id="MpY-nM-TP5"/>
+                            <constraint firstItem="cpi-z4-aC5" firstAttribute="leading" secondItem="pYg-D9-mXB" secondAttribute="leading" id="f07-W4-PIl"/>
+                            <constraint firstItem="cpi-z4-aC5" firstAttribute="top" secondItem="pYg-D9-mXB" secondAttribute="top" id="jEd-1h-zbd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="AoG-PJ-smM"/>
+                    <connections>
+                        <outlet property="settingsTableView" destination="cpi-z4-aC5" id="MQa-G3-lBS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbY-AL-9wi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2813" y="567"/>
+            <point key="canvasLocation" x="2811.594202898551" y="566.51785714285711"/>
         </scene>
         <!--RandomViewController-->
         <scene sceneID="dZs-1N-gaW">
@@ -105,8 +129,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S8p-a1-E8S" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="circle-cross-left" id="Tzw-8l-BPQ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qIK-h9-l9D">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="qIK-h9-l9D">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

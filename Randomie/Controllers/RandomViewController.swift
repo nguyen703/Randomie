@@ -26,24 +26,20 @@ class RandomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        setup()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
+    func setup() {
         guard let navBar = navigationController?.navigationBar else { return }
         
         
         // Create gradient color based on Chameleon
         let gradientColor = GradientColor(.topToBottom, frame: UIScreen.main.bounds, colors: Array(arrayLiteral: K.Palette.firstColor, K.Palette.secondColor, K.Palette.thirdColor))
         
-        // Chameleon helps create contrast color for text
-        let contrastTextColor = ContrastColorOf(gradientColor, returnFlat: true)
-        
-        navBar.tintColor = contrastTextColor
-        
-        navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: contrastTextColor]
+        navBar.tintColor = K.Palette.activeTextColor
+        navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: K.Palette.activeTextColor,
+                                      NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 17.0)]
         view.backgroundColor = gradientColor
-    
     }
     
     //MARK: - addButtonPressed Function
@@ -64,7 +60,7 @@ class RandomViewController: UIViewController {
             buttonRandomize.frame.size.height = K.Button.RandomButton.height
             buttonRandomize.frame = CGRect(
                 x: self.view.frame.size.width/2 - buttonRandomize.frame.size.width/2,
-                y: self.view.frame.size.height / 10 * 7,
+                y: self.view.frame.size.height * 0.75,
                 width: buttonRandomize.frame.width,
                 height: buttonRandomize.frame.height)
             

@@ -36,6 +36,7 @@ struct K {
         static let firstColor = UIColor(hexString: "caefd7")!
         static let secondColor = UIColor(hexString: "f5bfd7")!
         static let thirdColor = UIColor(hexString: "abc9e9")!
+        static let activeTextColor = UIColor(hexString: "354259")!
     }
     
     struct Button {
