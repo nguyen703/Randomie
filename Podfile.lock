@@ -2,6 +2,7 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - Floaty (4.2.0)
   - loady (1.0.7)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
@@ -13,6 +14,7 @@ PODS:
 
 DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/wowansm/Chameleon.git`, branch `swift5`)
+  - Floaty (~> 4.2.0)
   - loady
   - RxCocoa (= 6.5.0)
   - RxSwift (= 6.5.0)
@@ -20,6 +22,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Floaty
     - loady
     - RxCocoa
     - RxRelay
@@ -38,12 +41,13 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Floaty: e2bd5a0f6f7f70899e26ff2da31081c8bee8d1b0
   loady: f2acbcbd53bdeb55425e478304da2f7ff3ec706e
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 97ee489c7d467beabffe63d4b019fe655805e25e
+PODFILE CHECKSUM: 328e7f88e416985177e71b1d18429d378fafe32f
 
 COCOAPODS: 1.11.3

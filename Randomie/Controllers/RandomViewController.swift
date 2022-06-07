@@ -10,6 +10,7 @@ import Vision
 import PhotosUI
 import Loady
 import ChameleonFramework
+import Floaty
 
 class RandomViewController: UIViewController {
     
@@ -116,7 +117,11 @@ class RandomViewController: UIViewController {
         
         
         // Return when no sublayers found
-        guard let sublayers = imageView.layer.sublayers else { return }
+        guard let sublayers = imageView.layer.sublayers else {
+            button.stopLoading()
+            return
+            
+        }
         
         sublayers.forEach { layer in
             self.animateRandomLayer(layer: layer,
