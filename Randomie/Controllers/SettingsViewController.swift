@@ -11,12 +11,6 @@ import ChameleonFramework
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var settingsTableView: UITableView!
-    let sectionsTitle = ["Visualization",
-                          "General",
-                          "Review"]
-    let settings = [["Change sticker"],
-                    ["About me", "Privacy & Data"],
-                    ["Review App"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,35 +42,49 @@ class SettingsViewController: UIViewController {
 
 }
 
+//MARK: - TableView Delegate Methods
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     // TODO: Config sections UI
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        if let headerTitle = view as? UITableViewHeaderFooterView {
+            headerTitle.contentView.backgroundColor = .clear
+            headerTitle.textLabel?.textColor = K.Palette.activeTextColor
+            headerTitle.textLabel?.font = UIFont.italicSystemFont(ofSize: K.TableView.sectionFontSize)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return K.TableView.sectionHeight
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
-        return sectionsTitle.count
+        return SettingsData.sectionsTitle.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return settings[section].count
+        return SettingsData.settings[section].count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        return sectionsTitle[section]
+        return SettingsData.sectionsTitle[section]
     }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.numberOfLines = 0
-        
         var content = cell.defaultContentConfiguration()
         
-        content.text = settings[indexPath.section][indexPath.row]
+        content.text = SettingsData.settings[indexPath.section][indexPath.row]
         content.textProperties.color = K.Palette.activeTextColor
+        content.image = UIImage(named: K.Icon.settingsScreen)
+        content.imageProperties.tintColor = K.Palette.activeTextColor
         cell.backgroundColor = .clear
         
         cell.contentConfiguration = content

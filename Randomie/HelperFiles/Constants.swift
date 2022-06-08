@@ -58,4 +58,10 @@ struct K {
     struct TabBar {
         static let height: CGFloat = 67.0
     }
+    
+    struct TableView {
+        static let sectionHeight: CGFloat = 55.0
+        static let sectionFontSize: CGFloat = 22.0
+    }
+    
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B641C1272850C262009809C2 /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B641C1262850C262009809C2 /* SettingsData.swift */; };
 		B65CE1FE283B466100ADE820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE1FD283B466100ADE820 /* AppDelegate.swift */; };
 		B65CE200283B466100ADE820 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE1FF283B466100ADE820 /* SceneDelegate.swift */; };
 		B65CE202283B466100ADE820 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE201283B466100ADE820 /* RandomViewController.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		0B5A260419956148EA86A94E /* Pods-Randomie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Randomie.release.xcconfig"; path = "Target Support Files/Pods-Randomie/Pods-Randomie.release.xcconfig"; sourceTree = "<group>"; };
 		461EBA86F532FF11E3155C29 /* Pods-Randomie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Randomie.debug.xcconfig"; path = "Target Support Files/Pods-Randomie/Pods-Randomie.debug.xcconfig"; sourceTree = "<group>"; };
+		B641C1262850C262009809C2 /* SettingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsData.swift; sourceTree = "<group>"; };
 		B65CE1FA283B466100ADE820 /* Randomie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Randomie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65CE1FD283B466100ADE820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B65CE1FF283B466100ADE820 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				B65CE23B284637B200ADE820 /* RandomButton.swift */,
+				B641C1262850C262009809C2 /* SettingsData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				B65CE202283B466100ADE820 /* RandomViewController.swift in Sources */,
 				B65CE1FE283B466100ADE820 /* AppDelegate.swift in Sources */,
 				B65CE23E2847646600ADE820 /* TabBarBarController.swift in Sources */,
+				B641C1272850C262009809C2 /* SettingsData.swift in Sources */,
 				B65CE200283B466100ADE820 /* SceneDelegate.swift in Sources */,
 				B65CE212283CC9BC00ADE820 /* Helper.swift in Sources */,
 				B65CE2432847695E00ADE820 /* SettingsViewController.swift in Sources */,
