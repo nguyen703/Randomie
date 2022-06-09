@@ -51,12 +51,9 @@ class RandomViewController: UIViewController {
         let itemImportPhotos = FloatyItem()
         
         // Default Floaty
-        floaty.openAnimationType = .slideUp
-        floaty.size = self.view.frame.width * 0.15
-        floaty.paddingY = self.view.frame.height * 0.15
-        floaty.sticky = true // sticking to parent
-        floaty.buttonColor = .systemTeal
-        floaty.plusColor = .white
+        floaty.size = self.view.frame.width * K.Button.FloatyButton.buttonScaleVsScreen
+        floaty.paddingY = self.view.frame.height * K.Button.FloatyButton.buttonScaleVsScreen
+        floaty.customizeFloaty()
         
         // Button config
         itemTakePhotos.size = floaty.size
@@ -66,6 +63,14 @@ class RandomViewController: UIViewController {
         itemImportPhotos.size = floaty.size
         itemImportPhotos.customizeItem(title: "Import from Photos",
                                        icon: UIImage(systemName: "photo.fill.on.rectangle.fill")!)
+        
+        // TODO: add button handler
+        itemTakePhotos.handler = { (item) in
+            self.prensentCameraPicker()
+        }
+        itemImportPhotos.handler = { (item) in
+            self.presentLibraryPicker()
+        }
         
         floaty.addItem(item: itemTakePhotos)
         floaty.addItem(item: itemImportPhotos)
@@ -85,14 +90,14 @@ class RandomViewController: UIViewController {
         // Do not create if existed
         if (isButtonRandomCreated) { return }
         
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
             let buttonRandomize = LoadyButton()
             
             buttonRandomize.frame.size.width = K.Button.RandomButton.width
             buttonRandomize.frame.size.height = K.Button.RandomButton.height
             buttonRandomize.frame = CGRect(
-                x: self.view.frame.size.width/2 - buttonRandomize.frame.size.width/2,
-                y: self.view.frame.size.height * 0.75,
+                x: (self?.view.frame.size.width)!/2 - buttonRandomize.frame.size.width/2,
+                y: (self?.view.frame.size.height)! * 0.75,
                 width: buttonRandomize.frame.width,
                 height: buttonRandomize.frame.height)
             
@@ -102,11 +107,11 @@ class RandomViewController: UIViewController {
             
             // Apply customized setting for the button
             buttonRandomize.customizeButton()
-            buttonRandomize.addTarget(self, action: #selector(self.buttonRandomizePressed(_:)), for: .touchUpInside)
+            buttonRandomize.addTarget(self, action: #selector(self?.buttonRandomizePressed(_:)), for: .touchUpInside)
             
             // Do not create button if it exists already
-            self.isButtonRandomCreated = true
-            self.view.addSubview(buttonRandomize)
+            self?.isButtonRandomCreated = true
+            self?.view.addSubview(buttonRandomize)
         }
     }
     
@@ -275,16 +280,16 @@ class RandomViewController: UIViewController {
         
         // Camera button
         let cameraAction = UIAlertAction(title: "Take a photo", style: .default) { [weak self] (action) in
-            guard let self = self else { return }
+//            guard let self = self else { return }
 
-            self.prensentCameraPicker()
+            self?.prensentCameraPicker()
         }
         
         // Library button
         let libraryAction = UIAlertAction(title: "Import from Library", style: .default) { [weak self] (action) in
-            guard let self = self else { return }
+//            guard let self = self else { return }
             
-            self.presentLibraryPicker()
+            self?.presentLibraryPicker()
         }
         
         // Cancel button

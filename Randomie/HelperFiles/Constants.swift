@@ -51,6 +51,9 @@ struct K {
         struct FloatyButton {
             static let itemImageSizeScale = 0.45
             static let titleLabelFont: CGFloat = 16
+            static let defaultButtonColor: UIColor = .systemTeal
+            static let defaultIconTintColor: UIColor = .white
+            static let buttonScaleVsScreen: CGFloat = 0.15
         }
         
     }

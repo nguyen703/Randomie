@@ -8,9 +8,27 @@
 import UIKit
 import Floaty
 
+//MARK: - Floaty Extension
+extension Floaty: CustomFloaty {
+    
+    func customizeFloaty(buttonColor: UIColor = K.Button.FloatyButton.defaultButtonColor,
+                         plusColor: UIColor = K.Button.FloatyButton.defaultIconTintColor) {
+        
+        self.openAnimationType = .slideUp
+        self.sticky = true // sticking to parent
+        self.buttonColor = buttonColor
+        self.plusColor = plusColor
+        
+    }
+    
+}
+
+//MARK: - FloatyItem Extension
 extension FloatyItem: CustomItem {
     
-    func customizeItem(title: String, icon: UIImage, buttonColor: UIColor = UIColor.systemTeal, iconTintColor: UIColor = UIColor.white) {
+    func customizeItem(title: String, icon: UIImage,
+                       buttonColor: UIColor = K.Button.FloatyButton.defaultButtonColor,
+                       iconTintColor: UIColor = K.Button.FloatyButton.defaultIconTintColor) {
         
         self.title = title
         self.icon = icon
@@ -25,7 +43,14 @@ extension FloatyItem: CustomItem {
     
 }
 
+//MARK: - Floaty Protocol
+protocol CustomFloaty {
+    
+    func customizeFloaty(buttonColor: UIColor, plusColor: UIColor)
+    
+}
 
+//MARK: - FloatyItem Protocol
 protocol CustomItem {
     
     func customizeItem(title: String, icon: UIImage, buttonColor: UIColor, iconTintColor: UIColor)
