@@ -20,6 +20,9 @@ class SettingsViewController: UIViewController {
         settingsTableView.dataSource = self
         settingsTableView.backgroundColor = .clear
 
+        // Do not allow screen rotation
+        (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .all
+        
         setup()
     }
     
