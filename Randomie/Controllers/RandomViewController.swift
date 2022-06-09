@@ -28,19 +28,50 @@ class RandomViewController: UIViewController {
         super.viewDidLoad()
     
         setup()
+        setupFloaty()
     }
     
+    //MARK: - Setup UI
     func setup() {
         guard let navBar = navigationController?.navigationBar else { return }
-        
         
         // Create gradient color based on Chameleon
         let gradientColor = GradientColor(.topToBottom, frame: UIScreen.main.bounds, colors: Array(arrayLiteral: K.Palette.firstColor, K.Palette.secondColor, K.Palette.thirdColor))
         
+        // Config NavBar
         navBar.tintColor = K.Palette.activeTextColor
         navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: K.Palette.activeTextColor,
                                       NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 17.0)]
         view.backgroundColor = gradientColor
+    }
+    
+    func setupFloaty() {
+        let floaty = Floaty()
+        let itemTakePhotos = FloatyItem()
+        let itemImportPhotos = FloatyItem()
+        
+        // Default Floaty
+        floaty.openAnimationType = .slideUp
+        floaty.size = self.view.frame.width * 0.15
+        floaty.paddingY = self.view.frame.height * 0.15
+        floaty.sticky = true // sticking to parent
+        floaty.buttonColor = .systemTeal
+        floaty.plusColor = .white
+        
+        // Button config
+        itemTakePhotos.size = floaty.size
+        itemTakePhotos.customizeItem(title: "Take a photo",
+                                     icon: UIImage(systemName: "camera.fill")!)
+        
+        itemImportPhotos.size = floaty.size
+        itemImportPhotos.customizeItem(title: "Import from Photos",
+                                       icon: UIImage(systemName: "photo.fill.on.rectangle.fill")!)
+        
+        floaty.addItem(item: itemTakePhotos)
+        floaty.addItem(item: itemImportPhotos)
+        
+        view.addSubview(floaty)
+        
     }
     
     //MARK: - addButtonPressed Function

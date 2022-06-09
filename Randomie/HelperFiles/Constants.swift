@@ -48,6 +48,11 @@ struct K {
             static let height: CGFloat = 50
         }
         
+        struct FloatyButton {
+            static let itemImageSizeScale = 0.45
+            static let titleLabelFont: CGFloat = 16
+        }
+        
     }
     
     struct Icon {

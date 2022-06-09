@@ -26,7 +26,7 @@ open class FloatyItem: UIView {
     didSet {
       self.frame = CGRect(x: 0, y: 0, width: size, height: size)
       titleLabel.frame.origin.y = self.frame.height/2-titleLabel.frame.size.height/2
-      _iconImageView?.center = CGPoint(x: size/2, y: size/2) + imageOffset
+        _iconImageView?.center = CGPoint(x: size/2, y: size/2) + imageOffset
       self.setNeedsDisplay()
     }
   }
@@ -69,7 +69,7 @@ open class FloatyItem: UIView {
   @objc open var imageSize: CGSize = CGSize(width: 25, height: 25) {
     didSet {
       _iconImageView?.frame = CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height)
-      _iconImageView?.center = CGPoint(x: size/2, y: size/2) + imageOffset
+        _iconImageView?.center = CGPoint(x: size/2, y: size/2) + imageOffset
     }
   }
   
@@ -150,7 +150,7 @@ open class FloatyItem: UIView {
     get {
       if _iconImageView == nil {
         _iconImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height))
-        _iconImageView?.center = CGPoint(x: size/2, y: size/2) + imageOffset
+          _iconImageView?.center = CGPoint(x: size/2, y: size/2) + imageOffset
         _iconImageView?.contentMode = UIView.ContentMode.scaleAspectFill
         addSubview(_iconImageView!)
       }
