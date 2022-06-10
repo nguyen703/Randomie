@@ -314,7 +314,8 @@ extension RandomViewController: PHPickerViewControllerDelegate {
             
             result.itemProvider.loadObject(ofClass: UIImage.self, completionHandler: { (object, error) in
                 
-                
+                // Bugs occured when the picker could not load the image
+                // eg: optimized storage with iCloud case
                 if error != nil {
                     DispatchQueue.main.async {
                         self.showAlert(title: "Error :(", msg: "Could not load image, please try with another one", actionTitle: "OK")
@@ -334,7 +335,10 @@ extension RandomViewController: PHPickerViewControllerDelegate {
                     }
                     
                     guard let cgImage = userPickedImage.cgImage else {
-                        //TODO: show error message
+                        
+                        DispatchQueue.main.async {
+                            self.showAlert(title: "Error :(", msg: "An error occured while processing the image, please try again.", actionTitle: "OK")
+                        }
                         
                         return
                     }
@@ -370,7 +374,12 @@ extension RandomViewController: UIImagePickerControllerDelegate, UINavigationCon
             }
             
             guard let cgImage = userCapturedImage.cgImage else {
-                fatalError("Error converting CGImage from userCapturedImage")
+                
+                DispatchQueue.main.async {
+                    self.showAlert(title: "Error :(", msg: "An error occured while processing the image, please try again.", actionTitle: "OK")
+                }
+                
+                return
             }
             
             // Detect Image
