@@ -15,7 +15,7 @@ import Floaty
 class RandomViewController: UIViewController {
     
     // Temp Timer for the randomize button effect
-    var tempTimerBtnEffect : Timer?
+    private var tempTimerBtnEffect : Timer?
 
     @IBOutlet weak var imageView: UIImageView!
     
@@ -77,11 +77,6 @@ class RandomViewController: UIViewController {
         
         view.addSubview(floaty)
         
-    }
-    
-    //MARK: - addButtonPressed Function
-    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        showImagePickerOptions()
     }
     
     //MARK: - Randomize Button Functions
@@ -274,34 +269,7 @@ class RandomViewController: UIViewController {
         
     }
     
-    //MARK: - Show Bottom Sheet Options
-    func showImagePickerOptions() {
-        let alert = UIAlertController(title: "Pick a photo", message: "Choose a photo from Library or Camera", preferredStyle: .actionSheet)
-        
-        // Camera button
-        let cameraAction = UIAlertAction(title: "Take a photo", style: .default) { [weak self] (action) in
-//            guard let self = self else { return }
-
-            self?.prensentCameraPicker()
-        }
-        
-        // Library button
-        let libraryAction = UIAlertAction(title: "Import from Library", style: .default) { [weak self] (action) in
-//            guard let self = self else { return }
-            
-            self?.presentLibraryPicker()
-        }
-        
-        // Cancel button
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        alert.addAction(cameraAction)
-        alert.addAction(libraryAction)
-        alert.addAction(cancelAction)
-        
-        alert.view.layoutIfNeeded() //avoid Snapshotting error
-        self.present(alert, animated: true, completion: nil)
-    }
+    //MARK: - Present Pickers
     
     func prensentCameraPicker() {
         let cameraPicker = UIImagePickerController()
@@ -322,6 +290,16 @@ class RandomViewController: UIViewController {
         self.present(pickerViewController, animated: true, completion: nil)
     }
     
+    //MARK: - Create alert with messages
+    func showAlert(title: String, msg: String, actionTitle: String) {
+        
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: actionTitle, style: .default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }
 
 //MARK: - PHPicker Delegate Method
@@ -333,7 +311,16 @@ extension RandomViewController: PHPickerViewControllerDelegate {
         picker.dismiss(animated: true, completion: nil)
         
         for result in results {
+            
             result.itemProvider.loadObject(ofClass: UIImage.self, completionHandler: { (object, error) in
+                
+                
+                if error != nil {
+                    DispatchQueue.main.async {
+                        self.showAlert(title: "Error :(", msg: "Could not load image, please try with another one", actionTitle: "OK")
+                    }
+                    return
+                }
                 
                 if let userPickedImage = object as? UIImage {
                     
@@ -347,18 +334,14 @@ extension RandomViewController: PHPickerViewControllerDelegate {
                     }
                     
                     guard let cgImage = userPickedImage.cgImage else {
-                        fatalError("Error converting CGImage from userPickedImage")
+                        //TODO: show error message
+                        
+                        return
                     }
                     
                     // Detect Image
                     self.detectImage(with: cgImage)
                     self.createRandomizeButton()
-                    
-                } else { // Error occured when getting image
-                    
-                    if self.imageView.image != nil {
-                        self.createRandomizeButton()
-                    }
                     
                 }
                 
@@ -393,12 +376,6 @@ extension RandomViewController: UIImagePickerControllerDelegate, UINavigationCon
             // Detect Image
             self.detectImage(with: cgImage)
             self.createRandomizeButton()
-            
-        } else { // Error occured when getting image
-            
-            if self.imageView.image != nil {
-                self.createRandomizeButton()
-            }
             
         }
         

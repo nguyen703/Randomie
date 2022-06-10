@@ -70,13 +70,7 @@
                             <constraint firstItem="n56-xe-MBl" firstAttribute="top" secondItem="Fad-vy-sA2" secondAttribute="top" id="sqe-LW-Lbv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Randomie" id="Oct-he-dAZ">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="camera" id="wjC-Kf-mI3">
-                            <connections>
-                                <action selector="addButtonPressed:" destination="QCW-Ol-Baw" id="APB-yZ-fbG"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Randomie" id="Oct-he-dAZ"/>
                     <connections>
                         <outlet property="imageView" destination="n56-xe-MBl" id="H20-nX-By5"/>
                     </connections>
@@ -150,7 +144,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera" width="13" height="12"/>
         <image name="circle-cross-left" width="12" height="12"/>
         <image name="person-at" width="12" height="10"/>
         <systemColor name="systemBackgroundColor">
