@@ -19,10 +19,10 @@ class RandomViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     
-    var imageOrientation = CGImagePropertyOrientation(.up)
-    var winnerFound = false
-    var isButtonRandomCreated = false
-    var usedImages = [String]()
+    private var imageOrientation = CGImagePropertyOrientation(.up)
+    private var winnerFound = false
+    private var isButtonRandomCreated = false
+    private var usedImages = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -335,11 +335,9 @@ extension RandomViewController: PHPickerViewControllerDelegate {
                     }
                     
                     guard let cgImage = userPickedImage.cgImage else {
-                        
                         DispatchQueue.main.async {
                             self.showAlert(title: "Error :(", msg: "An error occured while processing the image, please try again.", actionTitle: "OK")
                         }
-                        
                         return
                     }
                     
@@ -374,11 +372,9 @@ extension RandomViewController: UIImagePickerControllerDelegate, UINavigationCon
             }
             
             guard let cgImage = userCapturedImage.cgImage else {
-                
                 DispatchQueue.main.async {
                     self.showAlert(title: "Error :(", msg: "An error occured while processing the image, please try again.", actionTitle: "OK")
                 }
-                
                 return
             }
             
