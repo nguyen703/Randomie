@@ -101,7 +101,7 @@ class RandomViewController: UIViewController {
             buttonRandomize.loadingColor = UIColor.white
             
             // Apply customized setting for the button
-            buttonRandomize.customizeButton()
+            buttonRandomize.customizeRandomButton()
             buttonRandomize.addTarget(self, action: #selector(self?.buttonRandomizePressed(_:)), for: .touchUpInside)
             
             // Do not create button if it exists already
@@ -331,7 +331,7 @@ extension RandomViewController: PHPickerViewControllerDelegate {
                     
                     // Use UIImage
                     DispatchQueue.main.async {
-                        self.imageView.image = userPickedImage
+                        self.imageView.image = userPickedImage.withRoundedCorners()
                     }
                     
                     guard let cgImage = userPickedImage.cgImage else {
@@ -368,7 +368,7 @@ extension RandomViewController: UIImagePickerControllerDelegate, UINavigationCon
             self.imageOrientation = CGImagePropertyOrientation(userCapturedImage.imageOrientation)
             
             DispatchQueue.main.async {
-                self.imageView.image = userCapturedImage
+                self.imageView.image = userCapturedImage.withRoundedCorners()
             }
             
             guard let cgImage = userCapturedImage.cgImage else {

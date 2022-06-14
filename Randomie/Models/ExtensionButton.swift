@@ -10,7 +10,7 @@ import UIKit
 
 extension UIButton: CustomProperties {
     
-    func customizeButton() {
+    func customizeRandomButton() {
         self.layer.cornerRadius = 6
         self.layer.borderColor = UIColor.white.cgColor
         self.setTitle("Randomize 😈", for: .normal)
@@ -41,7 +41,7 @@ extension UIButton: CustomProperties {
 
 protocol CustomProperties {
     
-    func customizeButton()
+    func customizeRandomButton()
     
     func addTouchedEffect()
     

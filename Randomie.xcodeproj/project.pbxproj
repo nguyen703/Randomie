@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B641C1272850C262009809C2 /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B641C1262850C262009809C2 /* SettingsData.swift */; };
-		B641C129285177EA009809C2 /* FloatyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B641C128285177EA009809C2 /* FloatyExtension.swift */; };
+		B641C129285177EA009809C2 /* ExtensionFloaty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B641C128285177EA009809C2 /* ExtensionFloaty.swift */; };
+		B641C12D285858A1009809C2 /* ExtensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B641C12C285858A1009809C2 /* ExtensionUIImage.swift */; };
 		B65CE1FE283B466100ADE820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE1FD283B466100ADE820 /* AppDelegate.swift */; };
 		B65CE200283B466100ADE820 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE1FF283B466100ADE820 /* SceneDelegate.swift */; };
 		B65CE202283B466100ADE820 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE201283B466100ADE820 /* RandomViewController.swift */; };
@@ -17,7 +18,7 @@
 		B65CE20A283B466300ADE820 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65CE208283B466300ADE820 /* LaunchScreen.storyboard */; };
 		B65CE212283CC9BC00ADE820 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE211283CC9BC00ADE820 /* Helper.swift */; };
 		B65CE216283E3A0300ADE820 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE215283E3A0300ADE820 /* Constants.swift */; };
-		B65CE23C284637B200ADE820 /* RandomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE23B284637B200ADE820 /* RandomButton.swift */; };
+		B65CE23C284637B200ADE820 /* ExtensionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE23B284637B200ADE820 /* ExtensionButton.swift */; };
 		B65CE23E2847646600ADE820 /* TabBarBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE23D2847646600ADE820 /* TabBarBarController.swift */; };
 		B65CE2432847695E00ADE820 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE2422847695E00ADE820 /* SettingsViewController.swift */; };
 		BADEA36795ED0F6740724270 /* Pods_Randomie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1794743AE73C5F429CCD245 /* Pods_Randomie.framework */; };
@@ -27,7 +28,8 @@
 		0B5A260419956148EA86A94E /* Pods-Randomie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Randomie.release.xcconfig"; path = "Target Support Files/Pods-Randomie/Pods-Randomie.release.xcconfig"; sourceTree = "<group>"; };
 		461EBA86F532FF11E3155C29 /* Pods-Randomie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Randomie.debug.xcconfig"; path = "Target Support Files/Pods-Randomie/Pods-Randomie.debug.xcconfig"; sourceTree = "<group>"; };
 		B641C1262850C262009809C2 /* SettingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsData.swift; sourceTree = "<group>"; };
-		B641C128285177EA009809C2 /* FloatyExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatyExtension.swift; sourceTree = "<group>"; };
+		B641C128285177EA009809C2 /* ExtensionFloaty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFloaty.swift; sourceTree = "<group>"; };
+		B641C12C285858A1009809C2 /* ExtensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImage.swift; sourceTree = "<group>"; };
 		B65CE1FA283B466100ADE820 /* Randomie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Randomie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65CE1FD283B466100ADE820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B65CE1FF283B466100ADE820 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,7 +40,7 @@
 		B65CE20B283B466300ADE820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B65CE211283CC9BC00ADE820 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		B65CE215283E3A0300ADE820 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B65CE23B284637B200ADE820 /* RandomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomButton.swift; sourceTree = "<group>"; };
+		B65CE23B284637B200ADE820 /* ExtensionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionButton.swift; sourceTree = "<group>"; };
 		B65CE23D2847646600ADE820 /* TabBarBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBarController.swift; sourceTree = "<group>"; };
 		B65CE2422847695E00ADE820 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D1794743AE73C5F429CCD245 /* Pods_Randomie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Randomie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,8 +139,9 @@
 		B65CE23F2847668F00ADE820 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B65CE23B284637B200ADE820 /* RandomButton.swift */,
-				B641C128285177EA009809C2 /* FloatyExtension.swift */,
+				B641C128285177EA009809C2 /* ExtensionFloaty.swift */,
+				B641C12C285858A1009809C2 /* ExtensionUIImage.swift */,
+				B65CE23B284637B200ADE820 /* ExtensionButton.swift */,
 				B641C1262850C262009809C2 /* SettingsData.swift */,
 			);
 			path = Models;
@@ -259,13 +262,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B65CE23C284637B200ADE820 /* RandomButton.swift in Sources */,
+				B65CE23C284637B200ADE820 /* ExtensionButton.swift in Sources */,
 				B65CE216283E3A0300ADE820 /* Constants.swift in Sources */,
 				B65CE202283B466100ADE820 /* RandomViewController.swift in Sources */,
 				B65CE1FE283B466100ADE820 /* AppDelegate.swift in Sources */,
-				B641C129285177EA009809C2 /* FloatyExtension.swift in Sources */,
+				B641C129285177EA009809C2 /* ExtensionFloaty.swift in Sources */,
 				B65CE23E2847646600ADE820 /* TabBarBarController.swift in Sources */,
 				B641C1272850C262009809C2 /* SettingsData.swift in Sources */,
+				B641C12D285858A1009809C2 /* ExtensionUIImage.swift in Sources */,
 				B65CE200283B466100ADE820 /* SceneDelegate.swift in Sources */,
 				B65CE212283CC9BC00ADE820 /* Helper.swift in Sources */,
 				B65CE2432847695E00ADE820 /* SettingsViewController.swift in Sources */,
