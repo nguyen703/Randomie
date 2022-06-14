@@ -14,7 +14,7 @@ struct K {
         static let layerShadowColor: CGColor = CGColor(srgbRed: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
         static let layerShadowRadius: CGFloat = 3.0
         static let layerShadowOpacity: Float = 0.3
-        static let layerEmoji = "🎃"
+        static let layerEmoji = "\u{1F383}" // 🎃
     }
     
     struct Animation {

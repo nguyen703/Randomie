@@ -11,6 +11,7 @@
 		B641C129285177EA009809C2 /* ExtensionFloaty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B641C128285177EA009809C2 /* ExtensionFloaty.swift */; };
 		B641C12D285858A1009809C2 /* ExtensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B641C12C285858A1009809C2 /* ExtensionUIImage.swift */; };
 		B641C12F2858773B009809C2 /* ExtensionUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B641C12E2858773B009809C2 /* ExtensionUIImageView.swift */; };
+		B641C13328589849009809C2 /* EmojiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B641C13228589849009809C2 /* EmojiData.swift */; };
 		B65CE1FE283B466100ADE820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE1FD283B466100ADE820 /* AppDelegate.swift */; };
 		B65CE200283B466100ADE820 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE1FF283B466100ADE820 /* SceneDelegate.swift */; };
 		B65CE202283B466100ADE820 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE201283B466100ADE820 /* RandomViewController.swift */; };
@@ -32,6 +33,7 @@
 		B641C128285177EA009809C2 /* ExtensionFloaty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFloaty.swift; sourceTree = "<group>"; };
 		B641C12C285858A1009809C2 /* ExtensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImage.swift; sourceTree = "<group>"; };
 		B641C12E2858773B009809C2 /* ExtensionUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImageView.swift; sourceTree = "<group>"; };
+		B641C13228589849009809C2 /* EmojiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiData.swift; sourceTree = "<group>"; };
 		B65CE1FA283B466100ADE820 /* Randomie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Randomie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65CE1FD283B466100ADE820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B65CE1FF283B466100ADE820 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				B641C12C285858A1009809C2 /* ExtensionUIImage.swift */,
 				B641C12E2858773B009809C2 /* ExtensionUIImageView.swift */,
 				B641C1262850C262009809C2 /* SettingsData.swift */,
+				B641C13228589849009809C2 /* EmojiData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				B65CE216283E3A0300ADE820 /* Constants.swift in Sources */,
 				B65CE202283B466100ADE820 /* RandomViewController.swift in Sources */,
 				B65CE1FE283B466100ADE820 /* AppDelegate.swift in Sources */,
+				B641C13328589849009809C2 /* EmojiData.swift in Sources */,
 				B641C129285177EA009809C2 /* ExtensionFloaty.swift in Sources */,
 				B65CE23E2847646600ADE820 /* TabBarBarController.swift in Sources */,
 				B641C1272850C262009809C2 /* SettingsData.swift in Sources */,
