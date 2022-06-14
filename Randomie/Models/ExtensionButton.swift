@@ -18,7 +18,7 @@ extension UIButton: CustomProperties {
         self.backgroundColor = UIColor.white
         self.layer.opacity = 0.8
         self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         self.layer.shadowOpacity = K.Button.RandomButton.opacity
         self.layer.cornerRadius = K.Button.RandomButton.cornerRadius
     }

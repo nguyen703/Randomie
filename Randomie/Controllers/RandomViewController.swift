@@ -26,7 +26,7 @@ class RandomViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         setup()
         setupFloaty()
     }
@@ -43,6 +43,9 @@ class RandomViewController: UIViewController {
         navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: K.Palette.activeTextColor,
                                       NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 17.0)]
         view.backgroundColor = gradientColor
+        
+        // Config UIImageView shadow
+        imageView.customizeImageViewShadow()
     }
     
     func setupFloaty() {
