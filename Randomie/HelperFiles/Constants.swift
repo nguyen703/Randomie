@@ -68,8 +68,17 @@ struct K {
     }
     
     struct TableView {
+        static let identifierSettings: String = "Cell"
         static let sectionHeight: CGFloat = 55.0
         static let sectionFontSize: CGFloat = 22.0
+    }
+    
+    struct CollectionView {
+        static let identifierEmoji: String = "EmojiCell"
+    }
+    
+    struct UDManager {
+        static let emojiKey: String = "selectedKey"
     }
     
 }

@@ -257,7 +257,7 @@ class RandomViewController: UIViewController {
                                            height: faceRect.size.height * 2)
                     
                     let textLayer = CATextLayer()
-                    textLayer.string = K.Layer.layerEmoji // Mofify the emoji in the Constants file
+                    textLayer.string = UDManager.shared.defaults.object(forKey: K.UDManager.emojiKey) == nil ? K.Layer.layerEmoji : UDManager.shared.defaults.object(forKey: K.UDManager.emojiKey) as? String
                     textLayer.fontSize = faceRect.width
                     textLayer.shadowColor = K.Layer.layerShadowColor
                     textLayer.shadowRadius = K.Layer.layerShadowRadius

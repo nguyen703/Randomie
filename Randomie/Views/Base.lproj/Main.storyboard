@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -43,11 +44,70 @@
                     <navigationItem key="navigationItem" title="Settings" id="AoG-PJ-smM"/>
                     <connections>
                         <outlet property="settingsTableView" destination="cpi-z4-aC5" id="MQa-G3-lBS"/>
+                        <segue destination="0Mt-Qe-xpl" kind="presentation" identifier="goToEmojiPicker" id="doe-02-cNH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbY-AL-9wi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2811.594202898551" y="566.51785714285711"/>
+        </scene>
+        <!--Emoji View Controller-->
+        <scene sceneID="9I3-io-Yn2">
+            <objects>
+                <viewController id="0Mt-Qe-xpl" customClass="EmojiViewController" customModule="Randomie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x7s-pK-rZD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Z75-vD-Eyz">
+                                <rect key="frame" x="10" y="85" width="394" height="757"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="S8e-N7-SoY">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiCell" id="QW7-pX-owE">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eEy-jP-709">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick an emoji 🌟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmH-uP-9en">
+                                <rect key="frame" x="141.5" y="64" width="131.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MmX-NI-bxG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z75-vD-Eyz" firstAttribute="top" secondItem="vmH-uP-9en" secondAttribute="bottom" id="3fx-If-W43"/>
+                            <constraint firstItem="vmH-uP-9en" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="x7s-pK-rZD" secondAttribute="leadingMargin" id="Pyy-v4-ews"/>
+                            <constraint firstItem="MmX-NI-bxG" firstAttribute="bottom" secondItem="Z75-vD-Eyz" secondAttribute="bottom" id="XVf-hO-EdP"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="vmH-uP-9en" secondAttribute="trailing" id="ZVR-SJ-Y5x"/>
+                            <constraint firstItem="vmH-uP-9en" firstAttribute="top" secondItem="x7s-pK-rZD" secondAttribute="topMargin" constant="20" id="clw-6Z-dAc"/>
+                            <constraint firstItem="vmH-uP-9en" firstAttribute="centerX" secondItem="x7s-pK-rZD" secondAttribute="centerX" id="jJ3-Se-J2l"/>
+                            <constraint firstItem="Z75-vD-Eyz" firstAttribute="leading" secondItem="MmX-NI-bxG" secondAttribute="leading" constant="10" id="k4i-tv-Uj1"/>
+                            <constraint firstItem="MmX-NI-bxG" firstAttribute="trailing" secondItem="Z75-vD-Eyz" secondAttribute="trailing" constant="10" id="o09-Gy-jiU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Z75-vD-Eyz" id="i8a-ie-yGe"/>
+                        <outlet property="label" destination="vmH-uP-9en" id="01o-AI-H60"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KKu-ts-hqu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3657.971014492754" y="566.51785714285711"/>
         </scene>
         <!--RandomViewController-->
         <scene sceneID="dZs-1N-gaW">

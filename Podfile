@@ -10,7 +10,6 @@ target 'Randomie' do
   pod 'RxSwift', '6.5.0'
   pod 'RxCocoa', '6.5.0'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/wowansm/Chameleon.git', :branch => 'swift5'
-  pod 'SnapKit', '~> 5.6.0'
   pod 'Floaty', '~> 4.2.0'
   
 end

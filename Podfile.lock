@@ -10,7 +10,6 @@ PODS:
   - RxRelay (6.5.0):
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
-  - SnapKit (5.6.0)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/wowansm/Chameleon.git`, branch `swift5`)
@@ -18,7 +17,6 @@ DEPENDENCIES:
   - loady
   - RxCocoa (= 6.5.0)
   - RxSwift (= 6.5.0)
-  - SnapKit (~> 5.6.0)
 
 SPEC REPOS:
   trunk:
@@ -27,7 +25,6 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
-    - SnapKit
 
 EXTERNAL SOURCES:
   ChameleonFramework:
@@ -46,8 +43,7 @@ SPEC CHECKSUMS:
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
-  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 328e7f88e416985177e71b1d18429d378fafe32f
+PODFILE CHECKSUM: c6f853fccf1944abb591986fa18590c75bd77ecd
 
 COCOAPODS: 1.11.3

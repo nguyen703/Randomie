@@ -15,7 +15,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        settingsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        settingsTableView.register(UITableViewCell.self, forCellReuseIdentifier: K.TableView.identifierSettings)
         settingsTableView.delegate = self
         settingsTableView.dataSource = self
         settingsTableView.backgroundColor = .clear
@@ -81,7 +81,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.TableView.identifierSettings, for: indexPath)
         var content = cell.defaultContentConfiguration()
         
         content.text = SettingsData.settings[indexPath.section][indexPath.row]
@@ -110,6 +110,16 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         settingsTableView.deselectRow(at: indexPath, animated: true)
+        
+        //TODO: navigate to the corresponding screen
+        let section = indexPath.section
+        let row = indexPath.row
+        
+        if SettingsData.settings[section][row] == "Change sticker" {
+            performSegue(withIdentifier: "goToEmojiPicker", sender: self)
+        }
+        
+        
     }
     
 }
