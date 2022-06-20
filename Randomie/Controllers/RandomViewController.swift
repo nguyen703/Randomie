@@ -11,6 +11,8 @@ import PhotosUI
 import Loady
 import ChameleonFramework
 import Floaty
+import RxCocoa
+import RxSwift
 
 class RandomViewController: UIViewController {
     
@@ -158,8 +160,7 @@ class RandomViewController: UIViewController {
         }
         
         sublayers.forEach { layer in
-            self.animateRandomLayer(layer: layer,
-                                    duration: K.Animation.animDuration,
+            layer.animateRandomLayer(duration: K.Animation.animDuration,
                                     repeatDuration: K.Animation.animRepeatDuration)
         }
         
@@ -169,28 +170,13 @@ class RandomViewController: UIViewController {
         }
     }
     
-    // Animation for all layers
-    func animateRandomLayer(layer: CALayer, after: CFTimeInterval = 0.0, duration: CFTimeInterval, repeatDuration: CFTimeInterval) {
-        let animation = CABasicAnimation(keyPath: "opacity")
-        
-        animation.fromValue = 1.0
-        animation.toValue = 0.1
-        animation.duration = duration
-        animation.beginTime = CACurrentMediaTime() + after
-        animation.fillMode = .removed
-        animation.repeatDuration = repeatDuration
-        
-        layer.add(animation, forKey: nil)
-    }
-    
     func findWinner(_ layers: [CALayer]) {
         let randomIndex = Int.random(in: 0..<layers.count)
         layers.forEach { layer in
             if layer != layers[randomIndex] {
                 layer.opacity = 0.0
             } else {
-                animateRandomLayer(layer: layer,
-                                   duration: K.Animation.animFindWinnerDuration,
+                layer.animateRandomLayer(duration: K.Animation.animFindWinnerDuration,
                                    repeatDuration: K.Animation.animFindWinnerRepeatDuration)
             }
         }

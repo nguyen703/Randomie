@@ -27,6 +27,7 @@
 		B6C4E0E4285C89770086FC4B /* UDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4E0E3285C89770086FC4B /* UDManager.swift */; };
 		B6C4E0E6285C8E890086FC4B /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4E0E5285C8E890086FC4B /* Emoji.swift */; };
 		B6C4E0E828606DCE0086FC4B /* ExtensionUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4E0E728606DCE0086FC4B /* ExtensionUITableViewCell.swift */; };
+		B6C4E0EA2860C5C70086FC4B /* ExtensionCALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4E0E92860C5C70086FC4B /* ExtensionCALayer.swift */; };
 		BADEA36795ED0F6740724270 /* Pods_Randomie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1794743AE73C5F429CCD245 /* Pods_Randomie.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		B6C4E0E3285C89770086FC4B /* UDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDManager.swift; sourceTree = "<group>"; };
 		B6C4E0E5285C8E890086FC4B /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		B6C4E0E728606DCE0086FC4B /* ExtensionUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUITableViewCell.swift; sourceTree = "<group>"; };
+		B6C4E0E92860C5C70086FC4B /* ExtensionCALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCALayer.swift; sourceTree = "<group>"; };
 		D1794743AE73C5F429CCD245 /* Pods_Randomie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Randomie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -161,6 +163,7 @@
 				B6C4E0E728606DCE0086FC4B /* ExtensionUITableViewCell.swift */,
 				B641C1262850C262009809C2 /* SettingsData.swift */,
 				B6C4E0E3285C89770086FC4B /* UDManager.swift */,
+				B6C4E0E92860C5C70086FC4B /* ExtensionCALayer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				B65CE212283CC9BC00ADE820 /* Helper.swift in Sources */,
 				B641C12F2858773B009809C2 /* ExtensionUIImageView.swift in Sources */,
 				B65CE2432847695E00ADE820 /* SettingsViewController.swift in Sources */,
+				B6C4E0EA2860C5C70086FC4B /* ExtensionCALayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
