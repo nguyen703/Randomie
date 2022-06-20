@@ -39,7 +39,7 @@ public class LoadyFourPhaseAnimation {
 			self.loady.titleEdgeInsets = UIEdgeInsets(top: 0, left: 28, bottom: 0, right: 0);
 			self.loady.layoutIfNeeded()
 		}
-		UIView.beginAnimations("changeTextTransition", context: nil)
+//		UIView.beginAnimations("changeTextTransition", context: nil)
 		let animation = CATransition()
 		animation.isRemovedOnCompletion = true
 		animation.duration = 0.2
@@ -74,7 +74,7 @@ public class LoadyFourPhaseAnimation {
 			cleanCircularLoading()
 			break
 		}
-		UIView.commitAnimations()
+//		UIView.commitAnimations()
 		
 	}
 	open func normalPhase(){

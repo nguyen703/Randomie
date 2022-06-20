@@ -88,7 +88,7 @@ public class LoadyIndicatorAnimation: LoadyAnimation {
         indicator.isUserInteractionEnabled = false
         
         if let indicator = indicator as? UIActivityIndicatorView{
-            indicator.style = self.options.indicatorViewStyle ? .gray : .white
+            indicator.style = .medium
         }
         
         indicator.startAnimating()

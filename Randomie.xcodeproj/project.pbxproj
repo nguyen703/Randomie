@@ -26,6 +26,7 @@
 		B65CE2432847695E00ADE820 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CE2422847695E00ADE820 /* SettingsViewController.swift */; };
 		B6C4E0E4285C89770086FC4B /* UDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4E0E3285C89770086FC4B /* UDManager.swift */; };
 		B6C4E0E6285C8E890086FC4B /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4E0E5285C8E890086FC4B /* Emoji.swift */; };
+		B6C4E0E828606DCE0086FC4B /* ExtensionUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4E0E728606DCE0086FC4B /* ExtensionUITableViewCell.swift */; };
 		BADEA36795ED0F6740724270 /* Pods_Randomie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1794743AE73C5F429CCD245 /* Pods_Randomie.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		B65CE2422847695E00ADE820 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B6C4E0E3285C89770086FC4B /* UDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDManager.swift; sourceTree = "<group>"; };
 		B6C4E0E5285C8E890086FC4B /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		B6C4E0E728606DCE0086FC4B /* ExtensionUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUITableViewCell.swift; sourceTree = "<group>"; };
 		D1794743AE73C5F429CCD245 /* Pods_Randomie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Randomie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,13 +152,14 @@
 		B65CE23F2847668F00ADE820 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B6C4E0E5285C8E890086FC4B /* Emoji.swift */,
+				B641C13228589849009809C2 /* EmojiData.swift */,
 				B65CE23B284637B200ADE820 /* ExtensionButton.swift */,
 				B641C128285177EA009809C2 /* ExtensionFloaty.swift */,
 				B641C12C285858A1009809C2 /* ExtensionUIImage.swift */,
 				B641C12E2858773B009809C2 /* ExtensionUIImageView.swift */,
+				B6C4E0E728606DCE0086FC4B /* ExtensionUITableViewCell.swift */,
 				B641C1262850C262009809C2 /* SettingsData.swift */,
-				B641C13228589849009809C2 /* EmojiData.swift */,
-				B6C4E0E5285C8E890086FC4B /* Emoji.swift */,
 				B6C4E0E3285C89770086FC4B /* UDManager.swift */,
 			);
 			path = Models;
@@ -285,6 +288,7 @@
 				B641C135285A91D8009809C2 /* EmojiPickerViewController.swift in Sources */,
 				B641C129285177EA009809C2 /* ExtensionFloaty.swift in Sources */,
 				B65CE23E2847646600ADE820 /* TabBarBarController.swift in Sources */,
+				B6C4E0E828606DCE0086FC4B /* ExtensionUITableViewCell.swift in Sources */,
 				B641C1272850C262009809C2 /* SettingsData.swift in Sources */,
 				B641C12D285858A1009809C2 /* ExtensionUIImage.swift in Sources */,
 				B6C4E0E6285C8E890086FC4B /* Emoji.swift in Sources */,

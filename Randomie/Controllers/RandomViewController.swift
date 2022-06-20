@@ -67,7 +67,7 @@ class RandomViewController: UIViewController {
         itemImportPhotos.customizeItem(title: "Import from Photos",
                                        icon: UIImage(systemName: "photo.fill.on.rectangle.fill")!)
         
-        // TODO: add button handler
+        // Add button handler
         itemTakePhotos.handler = { (item) in
             self.prensentCameraPicker()
         }
@@ -257,7 +257,10 @@ class RandomViewController: UIViewController {
                                            height: faceRect.size.height * 2)
                     
                     let textLayer = CATextLayer()
-                    textLayer.string = UDManager.shared.defaults.object(forKey: K.UDManager.emojiKey) == nil ? K.Layer.layerEmoji : UDManager.shared.defaults.object(forKey: K.UDManager.emojiKey) as? String
+                    textLayer.string = UDManager.shared.defaults.object(forKey: K.UDManager.emojiKey) == nil ?
+                    K.Layer.layerEmoji :
+                    UDManager.shared.defaults.object(forKey: K.UDManager.emojiKey) as? String
+                    
                     textLayer.fontSize = faceRect.width
                     textLayer.shadowColor = K.Layer.layerShadowColor
                     textLayer.shadowRadius = K.Layer.layerShadowRadius

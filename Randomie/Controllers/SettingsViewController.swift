@@ -82,15 +82,8 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: K.TableView.identifierSettings, for: indexPath)
-        var content = cell.defaultContentConfiguration()
-        
-        content.text = SettingsData.settings[indexPath.section][indexPath.row]
-        content.textProperties.color = K.Palette.activeTextColor
-        content.image = UIImage(named: K.Icon.settingsScreen)
-        content.imageProperties.tintColor = K.Palette.activeTextColor
-        cell.backgroundColor = .clear
-        
-        cell.contentConfiguration = content
+        cell.configCellColor(cellTitle: SettingsData.settings[indexPath.section][indexPath.row],
+                             cellImage: UIImage(named: K.Icon.settingsScreen)!)
         
         return cell
     }
@@ -98,13 +91,22 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         
         // TODO: Config cell properties right before highlight (start touching)
+        if let cell = tableView.cellForRow(at: indexPath) {
+            cell.configCellColor(cellTitle: SettingsData.settings[indexPath.section][indexPath.row],
+                                 cellImage: UIImage(named: K.Icon.settingsScreen)!,
+                                 textColor: .white)
+        }
 
     }
     
     func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
         
         // TODO: Config cell properties after unhighlight (release touching)
-
+        if let cell = tableView.cellForRow(at: indexPath) {
+            cell.configCellColor(cellTitle: SettingsData.settings[indexPath.section][indexPath.row],
+                                 cellImage: UIImage(named: K.Icon.settingsScreen)!)
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -115,10 +117,11 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         let section = indexPath.section
         let row = indexPath.row
         
-        if SettingsData.settings[section][row] == "Change sticker" {
-            performSegue(withIdentifier: "goToEmojiPicker", sender: self)
+        switch SettingsData.settings[section][row] {
+        case "Change sticker":
+            performSegue(withIdentifier: K.TableView.segueChangeEmoji, sender: self)
+        default: break
         }
-        
         
     }
     

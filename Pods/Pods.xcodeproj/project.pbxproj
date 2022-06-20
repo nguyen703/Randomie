@@ -665,7 +665,7 @@
 		A3DF130D2BB1DCEDF999B309DBD4854A /* PrimitiveSequence+Zip+arity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PrimitiveSequence+Zip+arity.swift"; path = "RxSwift/Traits/PrimitiveSequence/PrimitiveSequence+Zip+arity.swift"; sourceTree = "<group>"; };
 		A4183C837BF6DE7F5AA0FCD4BA37346E /* Observable+Bind.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Observable+Bind.swift"; path = "RxCocoa/Common/Observable+Bind.swift"; sourceTree = "<group>"; };
 		A5A17CA725874CEB1060C675F3C286E6 /* Queue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = Platform/DataStructures/Queue.swift; sourceTree = "<group>"; };
-		A5B78CB485C30ABB5407BB158D3D4B63 /* Pods-Randomie */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Randomie"; path = Pods_Randomie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5B78CB485C30ABB5407BB158D3D4B63 /* Pods_Randomie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Randomie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A61E063DF620FA27DD88B29EB8AAC3EC /* LoadyFourPhaseButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadyFourPhaseButton.swift; path = Loady/Classes/LoadyButton/LoadyFourPhaseButton.swift; sourceTree = "<group>"; };
 		A7D33F20D8D1A3E2A078944867E48668 /* Switch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Switch.swift; path = RxSwift/Observables/Switch.swift; sourceTree = "<group>"; };
 		A9611CF79411CC9CB9089BB57FF33B27 /* loady.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = loady.release.xcconfig; sourceTree = "<group>"; };
@@ -905,7 +905,7 @@
 				0383903D05EDD5C442C682C1F7A1752D /* ChameleonFramework.framework */,
 				2915C263A5C5C8012A8C1E97512DC6A8 /* Floaty.framework */,
 				FA2BDA50048D109ECC3CCA7BB5760EB4 /* Loady.framework */,
-				A5B78CB485C30ABB5407BB158D3D4B63 /* Pods-Randomie */,
+				A5B78CB485C30ABB5407BB158D3D4B63 /* Pods_Randomie.framework */,
 				BC432FD48A5932251F1CAFBC4BF74894 /* RxCocoa */,
 				FF8B264DFE802855D5D67E7CDDABFC3C /* RxRelay */,
 				809C5FAB588354C9BA37DC3EAB8CB45C /* RxSwift */,
@@ -1607,7 +1607,7 @@
 			);
 			name = "Pods-Randomie";
 			productName = Pods_Randomie;
-			productReference = A5B78CB485C30ABB5407BB158D3D4B63 /* Pods-Randomie */;
+			productReference = A5B78CB485C30ABB5407BB158D3D4B63 /* Pods_Randomie.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D2A775A88EA787684F2905BCB73F96D1 /* Floaty */ = {
@@ -2221,7 +2221,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Randomie/Pods-Randomie-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2498,7 +2498,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Randomie/Pods-Randomie-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

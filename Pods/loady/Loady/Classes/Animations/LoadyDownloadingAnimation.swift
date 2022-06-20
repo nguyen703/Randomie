@@ -94,12 +94,12 @@ public class LoadyDownloadingAnimation {
 		labelLayer = text
 		
 		// add animation
-		UIView.beginAnimations("changeTextTransition", context: nil)
+//		UIView.beginAnimations("changeTextTransition", context: nil)
 		let animation = LoadyCore.createTextPushAnimation(type: .fromTop, duration: 0.3)
 		text.add(animation, forKey:"changeTextTransition")
 		containerLayer.masksToBounds = true
 		self.loady.addSublayer(containerLayer, at: 0)
-		UIView.commitAnimations()
+//		UIView.commitAnimations()
 	}
 	
 	private func finishDownloading(){
@@ -107,7 +107,7 @@ public class LoadyDownloadingAnimation {
 			return
 		}
 		// add animation
-		UIView.beginAnimations("changeTextTransition", context: nil)
+//		UIView.beginAnimations("changeTextTransition", context: nil)
 		downloadLabel.string = downloadedOption.title
 		downloadLabel.foregroundColor = downloadedOption.textColor.cgColor
 		downloadLabel.font = downloadedOption.font
@@ -115,7 +115,7 @@ public class LoadyDownloadingAnimation {
 		downloadLabel.fontSize = downloadedOption.font.pointSize
 		let animation = LoadyCore.createTextPushAnimation(type: .fromTop, duration: 0.3)
 		downloadLabel.add(animation, forKey:"changeTextTransition")
-		UIView.commitAnimations()
+//		UIView.commitAnimations()
 	}
 	
 	private func createPercentageLabelLayer(){
@@ -132,12 +132,12 @@ public class LoadyDownloadingAnimation {
 		percentageLayer = text
 		
 		// add animation
-		UIView.beginAnimations("changeTextTransition", context: nil)
+//		UIView.beginAnimations("changeTextTransition", context: nil)
 		let animation = LoadyCore.createTextPushAnimation(type: .fromBottom, duration: 0.3)
 		text.add(animation, forKey:"changeTextTransitionPercent")
 		containerLayer.masksToBounds = true
 		self.loady.addSublayer(containerLayer, at: 1)
-		UIView.commitAnimations()
+//		UIView.commitAnimations()
 	}
 }
 
