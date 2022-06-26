@@ -14,7 +14,7 @@ struct SettingsData {
                           "Review"]
     
     static let settings = [["Change sticker"],
-                    ["About me", "Privacy & Data"],
+                    ["About us", "Privacy & Data"],
                     ["Review App"]]
     
 }

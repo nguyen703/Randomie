@@ -10,7 +10,7 @@ import ChameleonFramework
 
 class EmojiViewController: UIViewController {
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -24,9 +24,10 @@ class EmojiViewController: UIViewController {
     }
     
     func setup() {
-        label.textColor = K.Palette.activeTextColor
         let gradientColor = GradientColor(.leftToRight, frame: UIScreen.main.bounds, colors: Array(arrayLiteral: K.Palette.firstColor, K.Palette.secondColor, K.Palette.thirdColor))
-
+        navBar.backgroundColor = .clear
+        navBar.setBackgroundImage(UIImage(), for: .default)
+        navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: K.Palette.activeTextColor]
         view.backgroundColor = gradientColor
     }
     

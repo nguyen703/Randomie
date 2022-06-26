@@ -45,7 +45,7 @@
                     <connections>
                         <outlet property="settingsTableView" destination="cpi-z4-aC5" id="MQa-G3-lBS"/>
                         <segue destination="0Mt-Qe-xpl" kind="presentation" identifier="goToEmojiPicker" id="doe-02-cNH"/>
-                        <segue destination="cOl-sJ-DYR" kind="presentation" identifier="goToAboutMe" id="JL1-90-Av1"/>
+                        <segue destination="cOl-sJ-DYR" kind="presentation" identifier="goToAboutUs" id="JL1-90-Av1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbY-AL-9wi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -61,7 +61,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Z75-vD-Eyz">
-                                <rect key="frame" x="10" y="85" width="394" height="757"/>
+                                <rect key="frame" x="10" y="98" width="394" height="744"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="S8e-N7-SoY">
                                     <size key="itemSize" width="128" height="128"/>
@@ -81,49 +81,92 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick an emoji 🌟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmH-uP-9en">
-                                <rect key="frame" x="141.5" y="64" width="131.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ai4-bK-nH6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="j1O-m8-YrN"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Pick an emoji 🌟" id="FMv-1s-6pG"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MmX-NI-bxG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Z75-vD-Eyz" firstAttribute="top" secondItem="vmH-uP-9en" secondAttribute="bottom" id="3fx-If-W43"/>
-                            <constraint firstItem="vmH-uP-9en" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="x7s-pK-rZD" secondAttribute="leadingMargin" id="Pyy-v4-ews"/>
+                            <constraint firstItem="Z75-vD-Eyz" firstAttribute="top" secondItem="ai4-bK-nH6" secondAttribute="bottom" constant="10" id="1kd-qq-vwC"/>
+                            <constraint firstItem="ai4-bK-nH6" firstAttribute="top" secondItem="MmX-NI-bxG" secondAttribute="top" id="5zc-c5-qHh"/>
                             <constraint firstItem="MmX-NI-bxG" firstAttribute="bottom" secondItem="Z75-vD-Eyz" secondAttribute="bottom" id="XVf-hO-EdP"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="vmH-uP-9en" secondAttribute="trailing" id="ZVR-SJ-Y5x"/>
-                            <constraint firstItem="vmH-uP-9en" firstAttribute="top" secondItem="x7s-pK-rZD" secondAttribute="topMargin" constant="20" id="clw-6Z-dAc"/>
-                            <constraint firstItem="vmH-uP-9en" firstAttribute="centerX" secondItem="x7s-pK-rZD" secondAttribute="centerX" id="jJ3-Se-J2l"/>
                             <constraint firstItem="Z75-vD-Eyz" firstAttribute="leading" secondItem="MmX-NI-bxG" secondAttribute="leading" constant="10" id="k4i-tv-Uj1"/>
+                            <constraint firstItem="ai4-bK-nH6" firstAttribute="centerX" secondItem="Z75-vD-Eyz" secondAttribute="centerX" id="kS6-gu-plO"/>
                             <constraint firstItem="MmX-NI-bxG" firstAttribute="trailing" secondItem="Z75-vD-Eyz" secondAttribute="trailing" constant="10" id="o09-Gy-jiU"/>
+                            <constraint firstItem="ai4-bK-nH6" firstAttribute="leading" secondItem="MmX-NI-bxG" secondAttribute="leading" id="wra-aI-JIT"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Z75-vD-Eyz" id="i8a-ie-yGe"/>
-                        <outlet property="label" destination="vmH-uP-9en" id="01o-AI-H60"/>
+                        <outlet property="navBar" destination="ai4-bK-nH6" id="fxx-my-gXf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKu-ts-hqu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2068" y="1403"/>
+            <point key="canvasLocation" x="2066.666666666667" y="1402.9017857142856"/>
         </scene>
-        <!--About View Controller-->
+        <!--Title-->
         <scene sceneID="Qnb-vv-pDw">
             <objects>
                 <viewController id="cOl-sJ-DYR" customClass="AboutViewController" customModule="Randomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7HL-Jp-O29">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdx-Zy-S5x">
+                                <rect key="frame" x="16" y="44" width="382" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ENP-vl-AmC"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="About us" id="tAk-oj-9dg"/>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="p4v-jw-cm1">
+                                <rect key="frame" x="16" y="88" width="382" height="754"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="random-icon" translatesAutoresizingMaskIntoConstraints="NO" id="oRF-au-yOw">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="363"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm a ..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMX-41-T2L">
+                                        <rect key="frame" x="0.0" y="391" width="382" height="363"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="kKz-ur-KKl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kKz-ur-KKl" firstAttribute="bottom" secondItem="p4v-jw-cm1" secondAttribute="bottom" id="4iR-1o-NYV"/>
+                            <constraint firstItem="tdx-Zy-S5x" firstAttribute="top" secondItem="kKz-ur-KKl" secondAttribute="top" id="GTA-zc-9FM"/>
+                            <constraint firstItem="p4v-jw-cm1" firstAttribute="trailing" secondItem="kKz-ur-KKl" secondAttribute="trailing" constant="-16" id="Hpv-Y4-E66"/>
+                            <constraint firstItem="tdx-Zy-S5x" firstAttribute="trailing" secondItem="p4v-jw-cm1" secondAttribute="trailing" id="Jha-wP-5mC"/>
+                            <constraint firstItem="p4v-jw-cm1" firstAttribute="top" secondItem="tdx-Zy-S5x" secondAttribute="bottom" id="Nb2-oK-ncv"/>
+                            <constraint firstItem="tdx-Zy-S5x" firstAttribute="leading" secondItem="p4v-jw-cm1" secondAttribute="leading" id="THk-jB-4XB"/>
+                            <constraint firstItem="p4v-jw-cm1" firstAttribute="leading" secondItem="kKz-ur-KKl" secondAttribute="leading" constant="16" id="U3a-pU-qPj"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="im1-n5-jvY"/>
+                    <connections>
+                        <outlet property="image" destination="oRF-au-yOw" id="Ckr-Vn-rO6"/>
+                        <outlet property="navBar" destination="tdx-Zy-S5x" id="BxZ-Fm-ZGQ"/>
+                        <outlet property="text" destination="nMX-41-T2L" id="Ykw-qZ-qNy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HhM-jd-Isz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2812" y="1403"/>
+            <point key="canvasLocation" x="2811.594202898551" y="1402.9017857142856"/>
         </scene>
         <!--RandomViewController-->
         <scene sceneID="dZs-1N-gaW">
@@ -222,6 +265,7 @@
     <resources>
         <image name="circle-cross-left" width="12" height="12"/>
         <image name="person-at" width="12" height="10"/>
+        <image name="random-icon" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
