@@ -120,6 +120,8 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         switch SettingsData.settings[section][row] {
         case "Change sticker":
             performSegue(withIdentifier: K.TableView.segueChangeEmoji, sender: self)
+        case "About me":
+            performSegue(withIdentifier: "goToAboutMe", sender: self)
         default: break
         }
         

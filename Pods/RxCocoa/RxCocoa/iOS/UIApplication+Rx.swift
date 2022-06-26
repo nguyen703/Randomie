@@ -15,7 +15,7 @@ extension Reactive where Base: UIApplication {
     /// Bindable sink for `isNetworkActivityIndicatorVisible`.
     public var isNetworkActivityIndicatorVisible: Binder<Bool> {
         return Binder(self.base) { application, active in
-            application.isNetworkActivityIndicatorVisible = active
+//            application.isNetworkActivityIndicatorVisible = active
         }
     }
     
